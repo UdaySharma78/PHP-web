@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev with PHP - Learn PHP Programming for Beginners</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <span class="bracket">&lt;</span>
+                    <span class="php-text">PHP</span>
+                    <span class="bracket">/&gt;</span>
+                </div>
+                <div class="logo-text">
+                    <h1>WebDev with PHP</h1>
+                    <p class="tagline">Master PHP Programming</p>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="lrnphp.html">Learn PHP</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">Welcome to <span class="highlight">WebDev with PHP</span></h2>
+                <p class="hero-subtitle">Your Complete Guide to Learning PHP Programming from Scratch</p>
+                <p class="hero-description">Master the most popular server-side scripting language used by millions of websites worldwide. Start your journey to becoming a professional web developer today!</p>
+                <div class="hero-buttons">
+                    <a href="lrnphp.html" class="btn btn-primary">Start Learning Now</a>
+                    <a href="#why-php" class="btn btn-secondary">Why Learn PHP?</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Topics</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Beginner</span>
+                        <span class="stat-label">Friendly</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">welcome.php</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="tag">&lt;?php</span>
+  <span class="comment">// Your first PHP program</span>
+  <span class="variable">$name</span> = <span class="string">"World"</span>;
+  <span class="keyword">echo</span> <span class="string">"Hello, "</span> . <span class="variable">$name</span> . <span class="string">"!"</span>;
+  
+  <span class="comment">// Start building amazing websites</span>
+  <span class="keyword">function</span> <span class="function">greet</span>(<span class="variable">$user</span>) {
+    <span class="keyword">return</span> <span class="string">"Welcome to PHP!"</span>;
+  }
+<span class="tag">?&gt;</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is PHP Section -->
+    <section class="what-is-php">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Introduction</span>
+                <h2>What is PHP?</h2>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-text">
+                    <p class="intro-text"><strong>PHP (Hypertext Preprocessor)</strong> is a powerful, open-source server-side scripting language designed specifically for web development. It's embedded in HTML and executed on the server, generating dynamic web pages that respond to user interactions.</p>
+                    
+                    <p>Created in 1994 by Rasmus Lerdorf, PHP has evolved from a simple set of Common Gateway Interface (CGI) binaries written in C into one of the most popular programming languages powering the modern web.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="icon">🚀</span>
+                            <div>
+                                <h4>Easy to Learn</h4>
+                                <p>Perfect for beginners with simple, intuitive syntax</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">🌐</span>
+                            <div>
+                                <h4>Platform Independent</h4>
+                                <p>Runs on Windows, Linux, Mac, and Unix</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">🔓</span>
+                            <div>
+                                <h4>Open Source</h4>
+                                <p>Completely free with massive community support</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">💪</span>
+                            <div>
+                                <h4>Powerful & Flexible</h4>
+                                <p>From simple blogs to enterprise applications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="php-logo-section">
+                    <div class="php-elephant">
+                        <div class="elephant-body">
+                            <svg width="300" height="300" viewBox="0 0 300 300">
+                                <ellipse cx="150" cy="150" rx="120" ry="100" fill="#8892BF"/>
+                                <text x="150" y="170" font-size="80" font-weight="bold" fill="white" text-anchor="middle">PHP</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="powered-by">
+                        <h3>Powers Major Platforms</h3>
+                        <div class="platforms">
+                            <span class="platform-badge">WordPress</span>
+                            <span class="platform-badge">Facebook</span>
+                            <span class="platform-badge">Wikipedia</span>
+                            <span class="platform-badge">Slack</span>
+                            <span class="platform-badge">MailChimp</span>
+                            <span class="platform-badge">Etsy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History of PHP Section -->
+    <section class="history-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Timeline</span>
+                <h2>History of PHP</h2>
+                <p class="section-subtitle">From a simple tool to powering 77% of the web</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1994</div>
+                    <div class="timeline-content">
+                        <h3>PHP/FI (Personal Home Page / Forms Interpreter)</h3>
+                        <p>Rasmus Lerdorf created PHP as a set of CGI scripts to track visits to his online resume. It was a simple tool for creating dynamic web pages.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1997</div>
+                    <div class="timeline-content">
+                        <h3>PHP 3.0</h3>
+                        <p>Zeev Suraski and Andi Gutmans rewrote the parser, and PHP 3 was born. The name officially changed to "PHP: Hypertext Preprocessor." This version introduced support for multiple databases and protocols.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2000</div>
+                    <div class="timeline-content">
+                        <h3>PHP 4.0 (Zend Engine)</h3>
+                        <p>Powered by the new Zend Engine, PHP 4 brought significant performance improvements, better resource handling, and support for more web servers. PHP started gaining serious commercial traction.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2004</div>
+                    <div class="timeline-content">
+                        <h3>PHP 5.0 (Object-Oriented PHP)</h3>
+                        <p>Revolutionary update introducing improved OOP support with the Zend Engine II. Added features like PDO (PHP Data Objects), better error handling, and XML support. This version made PHP suitable for large-scale applications.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h3>PHP 7.0 (Performance Boost)</h3>
+                        <p>Massive performance improvements (2x faster than PHP 5.6), reduced memory consumption, scalar type declarations, and return type declarations. PHP 6 was skipped due to Unicode challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">
+                        <h3>PHP 8.0 (JIT Compiler)</h3>
+                        <p>Introduced Just-In-Time (JIT) compilation, union types, named arguments, attributes, and match expressions. Major step forward in modern PHP development.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item current">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>PHP Today</h3>
+                        <p>PHP powers 77% of all websites whose server-side language is known. It's faster, more secure, and more feature-rich than ever. The PHP community continues to grow and innovate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Learn PHP Section -->
+    <section class="why-php" id="why-php">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Benefits</span>
+                <h2>Why Learn PHP?</h2>
+                <p class="section-subtitle">Discover the advantages of mastering PHP programming</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>👨‍💻</span>
+                    </div>
+                    <h3>Easy to Learn</h3>
+                    <p>PHP has a gentle learning curve with simple syntax similar to C and Java. Perfect for beginners who are just starting their programming journey. You can build your first web page in minutes!</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>💼</span>
+                    </div>
+                    <h3>High Demand in Job Market</h3>
+                    <p>Thousands of companies worldwide need PHP developers. With 77% of websites using PHP, career opportunities are abundant. Average PHP developer salary ranges from $60,000 to $120,000+ annually.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🆓</span>
+                    </div>
+                    <h3>Completely Free</h3>
+                    <p>PHP is open-source and free to use. No licensing fees, no restrictions. Download, install, and start building immediately without spending a penny on tools or software.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🌍</span>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Write once, run anywhere! PHP runs on all major operating systems including Windows, Linux, macOS, and Unix. Your code works seamlessly across different platforms.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🗄️</span>
+                    </div>
+                    <h3>Database Integration</h3>
+                    <p>Built-in support for all major databases including MySQL, PostgreSQL, Oracle, MongoDB, and more. Create powerful data-driven applications with ease using PHP's excellent database connectivity.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🚀</span>
+                    </div>
+                    <h3>Fast Development</h3>
+                    <p>PHP's extensive library of built-in functions and frameworks like Laravel, Symfony, and CodeIgniter allow rapid application development. Build complex websites faster than ever.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>👥</span>
+                    </div>
+                    <h3>Huge Community</h3>
+                    <p>Join millions of PHP developers worldwide. Access countless tutorials, forums, packages, and resources. Get help quickly from the active and supportive PHP community.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🔧</span>
+                    </div>
+                    <h3>Flexible & Scalable</h3>
+                    <p>From small personal blogs to large enterprise applications, PHP scales beautifully. Facebook started with PHP and still uses it! Build anything from simple sites to complex systems.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🏢</span>
+                    </div>
+                    <h3>Powers CMS Platforms</h3>
+                    <p>WordPress, Drupal, Joomla - the most popular Content Management Systems are built with PHP. Learning PHP opens doors to customizing and developing for these platforms.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>📚</span>
+                    </div>
+                    <h3>Rich Ecosystem</h3>
+                    <p>Access thousands of frameworks, libraries, and tools. Composer package manager provides easy dependency management. The PHP ecosystem has everything you need for modern web development.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>⚡</span>
+                    </div>
+                    <h3>Excellent Performance</h3>
+                    <p>Modern PHP (7.x and 8.x) is incredibly fast with JIT compilation. Optimized for web applications with low memory footprint. Handle millions of requests efficiently.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🛡️</span>
+                    </div>
+                    <h3>Security Features</h3>
+                    <p>Built-in security functions for password hashing, SQL injection prevention, XSS protection, and more. Regular security updates keep your applications safe and secure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section -->
+    <section class="curriculum-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Curriculum</span>
+                <h2>What You'll Learn</h2>
+                <p class="section-subtitle">Comprehensive PHP programming from basics to advanced</p>
+            </div>
+            
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <div class="card-number">01</div>
+                    <h3>PHP Basics</h3>
+                    <p>Master PHP syntax, variables, data types, operators, and control structures. Build a solid foundation for your PHP journey.</p>
+                    <ul class="topic-list">
+                        <li>PHP Syntax & Comments</li>
+                        <li>Variables & Constants</li>
+                        <li>Data Types & Type Casting</li>
+                        <li>Operators & Expressions</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-card">
+                    <div class="card-number">02</div>
+                    <h3>Functions</h3>
+                    <p>Learn to create reusable code with functions. Understand parameters, return values, and scope.</p>
+                    <ul class="topic-list">
+                        <li>Creating Functions</li>
+                        <li>Parameters & Arguments</li>
+                        <li>Return Values</li>
+                        <li>Built-in Functions</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-card">
+                    <div class="card-number">03</div>
+                    <h3>Strings & Arrays</h3>
+                    <p>Master text manipulation and data structures. Work with indexed, associative, and multidimensional arrays.</p>
+                    <ul class="topic-list">
+                        <li>String Functions</li>
+                        <li>Array Operations</li>
+                        <li>Array Functions</li>
+                        <li>Array Sorting</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-card">
+                    <div class="card-number">04</div>
+                    <h3>Forms & Validation</h3>
+                    <p>Handle user input securely. Learn GET/POST methods, form validation, and security best practices.</p>
+                    <ul class="topic-list">
+                        <li>Form Handling</li>
+                        <li>GET vs POST</li>
+                        <li>Input Validation</li>
+                        <li>XSS Prevention</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-card">
+                    <div class="card-number">05</div>
+                    <h3>Database (MySQL)</h3>
+                    <p>Connect to databases, perform CRUD operations, and build data-driven applications with MySQL.</p>
+                    <ul class="topic-list">
+                        <li>MySQL Connection</li>
+                        <li>CRUD Operations</li>
+                        <li>Prepared Statements</li>
+                        <li>Database Security</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-card">
+                    <div class="card-number">06</div>
+                    <h3>Cookies & Sessions</h3>
+                    <p>Manage user state and create authentication systems. Learn cookie management and session handling.</p>
+                    <ul class="topic-list">
+                        <li>Cookie Management</li>
+                        <li>Session Handling</li>
+                        <li>Login Systems</li>
+                        <li>User Authentication</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-card">
+                    <div class="card-number">07</div>
+                    <h3>File System</h3>
+                    <p>Read, write, and manage files. Handle file uploads and directory operations safely.</p>
+                    <ul class="topic-list">
+                        <li>File Reading/Writing</li>
+                        <li>File Uploads</li>
+                        <li>Directory Management</li>
+                        <li>File Security</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-card highlight">
+                    <div class="card-number">+</div>
+                    <h3>And Much More!</h3>
+                    <p>Practical examples, real-world projects, best practices, and hands-on exercises throughout the course.</p>
+                    <a href="lrnphp.html" class="start-btn">Start Learning →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your PHP Journey?</h2>
+                <p>Join thousands of students learning PHP programming. Start building dynamic websites today!</p>
+                <a href="lrnphp.html" class="btn btn-cta">Get Started - It's Free!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WebDev with PHP</h3>
+                    <p>Your complete guide to learning PHP programming from scratch. Master the language that powers 77% of the web.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="lrnphp.html">Learn PHP</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Topics</h4>
+                    <ul>
+                        <li><a href="lrnphp.html">Introduction</a></li>
+                        <li><a href="lrnphp.html">Variables</a></li>
+                        <li><a href="lrnphp.html">Functions</a></li>
+                        <li><a href="lrnphp.html">Arrays</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Email: contact@webdevphp.com</p>
+                    <p>Created with ❤️ for beginner programmers</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 WebDev with PHP | Designed by Uday Sharma | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

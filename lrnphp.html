@@ -1,0 +1,3428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn PHP - Complete Tutorial for Beginners</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">WebDev with PHP</div>
+    <div class="header-buttons">
+        <a href="index.html">Home</a>
+        <a href="lrnphp.html">Topics</a>
+        <a href="about.html">About</a>
+
+    </div>
+</header>
+
+<!-- Top Navigation Bar -->
+<nav class="top-nav">
+    <button class="nav-btn active" onclick="showTopic('introduction')">Introduction</button>
+    <button class="nav-btn" onclick="showTopic('variables')">Variables</button>
+    <button class="nav-btn" onclick="showTopic('functions')">Functions</button>
+    <button class="nav-btn" onclick="showTopic('strings')">Strings</button>
+    <button class="nav-btn" onclick="showTopic('arrays')">Arrays</button>
+    <button class="nav-btn" onclick="showTopic('forms')">Forms</button>
+    <button class="nav-btn" onclick="showTopic('database')">Database</button>
+    <button class="nav-btn" onclick="showTopic('cookies')">Cookies</button>
+    <button class="nav-btn" onclick="showTopic('sessions')">Sessions</button>
+    <button class="nav-btn" onclick="showTopic('filesystem')">File System</button>
+</nav>
+
+<!-- Content Area -->
+<div class="content-area">
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="topic-content active">
+        <h1>📚 Introduction to PHP</h1>
+        
+        <div class="intro-box">
+            <p><strong>Welcome to PHP Programming!</strong> This tutorial is designed specifically for beginners who want to learn web development. Don't worry if you've never programmed before - we'll start from the basics and build up your skills step by step.</p>
+        </div>
+
+        <h2>🤔 What is PHP?</h2>
+        <p><strong>PHP</strong> stands for <strong>Hypertext Preprocessor</strong>. It is a powerful, widely-used open-source scripting language that runs on web servers. PHP is especially designed for creating dynamic and interactive websites.</p>
+        
+        <div class="learn-box">
+            <h3>💡 Understanding PHP in Simple Terms:</h3>
+            <p>Think of PHP as the "brain" behind websites. While HTML creates the structure (like the skeleton) and CSS adds the style (like clothing), PHP adds the intelligence and interactivity. For example:</p>
+            <ul>
+                <li><strong>HTML</strong> creates a login form on your screen</li>
+                <li><strong>CSS</strong> makes it look beautiful</li>
+                <li><strong>PHP</strong> actually checks if your username and password are correct!</li>
+            </ul>
+        </div>
+
+        <h2>🌐 Why Learn PHP?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h4>1. Easy to Learn</h4>
+                <p>PHP has a simple and straightforward syntax that's perfect for beginners. If you know basic HTML, you're already halfway there!</p>
+            </div>
+            <div class="benefit-item">
+                <h4>2. Widely Used</h4>
+                <p>Over 75% of websites use PHP! Popular platforms like WordPress, Facebook, and Wikipedia are built with PHP.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>3. Great Career Opportunities</h4>
+                <p>PHP developers are in high demand. Learning PHP opens doors to freelancing and full-time jobs.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>4. Free and Open Source</h4>
+                <p>PHP is completely free to use. You don't need to pay for licenses or expensive software.</p>
+            </div>
+        </div>
+
+        <h2>⚙️ How Does PHP Work?</h2>
+        <p>Understanding how PHP works will help you grasp the bigger picture. Here's the step-by-step process:</p>
+        
+        <div class="process-steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-content">
+                    <h4>User Requests a Page</h4>
+                    <p>When someone types a website address (URL) in their browser, they're requesting a PHP file from the server.</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-content">
+                    <h4>Server Processes PHP</h4>
+                    <p>The web server finds the PHP file and executes all the PHP code inside it. This happens on the server, not on the user's computer.</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-content">
+                    <h4>PHP Generates HTML</h4>
+                    <p>PHP processes the code and generates pure HTML output based on the instructions you wrote.</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">4</span>
+                <div class="step-content">
+                    <h4>Browser Displays Result</h4>
+                    <p>The server sends the HTML to the user's browser, which displays the final webpage. The user never sees your PHP code - only the result!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="important-note">
+            <strong>🔒 Important Security Note:</strong> Because PHP runs on the server, your code remains secure. Users can see the HTML output but never your actual PHP code, which may contain sensitive information like database passwords.
+        </div>
+
+        <h2>📝 Your First PHP Program</h2>
+        <p>Let's write your very first PHP program! Don't worry about understanding everything right now - we'll explain each part.</p>
+
+        <h3>Basic PHP Syntax:</h3>
+        <p>All PHP code must be written between <code>&lt;?php</code> and <code>?&gt;</code> tags. These tags tell the server "Hey, this is PHP code - please execute it!"</p>
+        
+        <pre>&lt;?php
+  echo "Hello, World!";
+?&gt;</pre>
+
+        <div class="explanation-box">
+            <h4>🔍 Code Explanation:</h4>
+            <ul>
+                <li><code>&lt;?php</code> - This opens the PHP code block</li>
+                <li><code>echo</code> - This is a command that prints text on the webpage</li>
+                <li><code>"Hello, World!"</code> - This is the text we want to display</li>
+                <li><code>;</code> - Every PHP statement must end with a semicolon (think of it as a period in a sentence)</li>
+                <li><code>?&gt;</code> - This closes the PHP code block</li>
+            </ul>
+        </div>
+
+        <h3>Mixing PHP with HTML:</h3>
+        <p>One of PHP's superpowers is that you can mix it with HTML. This allows you to create dynamic content within your web pages:</p>
+        
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First PHP Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to PHP!&lt;/h1&gt;
+    &lt;?php
+        echo "&lt;p&gt;Today's date is: " . date("Y-m-d") . "&lt;/p&gt;";
+        echo "&lt;p&gt;Current time is: " . date("H:i:s") . "&lt;/p&gt;";
+    ?&gt;
+    &lt;p&gt;This is regular HTML text.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <div class="explanation-box">
+            <h4>🔍 What's Happening Here?</h4>
+            <p>In this example, we're combining HTML with PHP. The HTML creates the page structure, while PHP dynamically generates the current date and time. Every time someone loads this page, they'll see the updated date and time!</p>
+        </div>
+
+        <h2>💬 PHP Comments</h2>
+        <p>Comments are notes you write in your code that PHP ignores. They're super helpful for explaining what your code does, especially when you come back to it later.</p>
+
+        <pre>&lt;?php
+  // This is a single-line comment
+  echo "Hello!"; // You can also add comments after code
+  
+  /* This is a multi-line comment
+     It can span multiple lines
+     Great for longer explanations */
+  
+  # This is also a single-line comment (alternative style)
+?&gt;</pre>
+
+        <div class="tip-box">
+            <strong>💡 Pro Tip:</strong> Always write comments! They help you remember what your code does and make it easier for others to understand your work. Think of comments as leaving notes for your future self.
+        </div>
+
+        <h2>🎯 What Can You Build with PHP?</h2>
+        <p>PHP is incredibly versatile. Here are some real-world applications you can create:</p>
+        <ul>
+            <li><strong>Blog Platforms:</strong> Like WordPress - manage posts, comments, and users</li>
+            <li><strong>E-commerce Websites:</strong> Online stores with shopping carts and payment systems</li>
+            <li><strong>Social Networks:</strong> User profiles, friend systems, messaging</li>
+            <li><strong>Content Management Systems (CMS):</strong> Websites that non-technical people can easily update</li>
+            <li><strong>Forums and Discussion Boards:</strong> Community platforms where users can post and reply</li>
+            <li><strong>Login Systems:</strong> Secure authentication for websites</li>
+            <li><strong>Image Galleries:</strong> Upload, organize, and display photos</li>
+            <li><strong>REST APIs:</strong> Backend services for mobile apps</li>
+        </ul>
+
+        <h2>🛠️ Setting Up PHP</h2>
+        <p>To start coding in PHP, you need a server environment. Here are beginner-friendly options:</p>
+        
+        <div class="setup-options">
+            <div class="setup-option">
+                <h4>For Windows Users:</h4>
+                <p><strong>XAMPP</strong> - Download and install XAMPP (free). It includes Apache server, PHP, and MySQL all in one package.</p>
+            </div>
+            <div class="setup-option">
+                <h4>For Mac Users:</h4>
+                <p><strong>MAMP</strong> - Similar to XAMPP but optimized for Mac. Easy to install and use.</p>
+            </div>
+            <div class="setup-option">
+                <h4>For All Users:</h4>
+                <p><strong>Online Editors</strong> - Websites like PHPFiddle, OnlinePHP, or Repl.it let you practice PHP without installing anything!</p>
+            </div>
+        </div>
+
+        <h2>📚 What's Next?</h2>
+        <p>Now that you understand what PHP is and how it works, you're ready to dive deeper! In the next sections, you'll learn about:</p>
+        <ul>
+            <li>Variables - storing and using data</li>
+            <li>Functions - reusable blocks of code</li>
+            <li>Strings - working with text</li>
+            <li>Arrays - storing multiple values</li>
+            <li>And much more!</li>
+        </ul>
+
+        <div class="encouragement-box">
+            <p><strong>🌟 Remember:</strong> Every expert programmer was once a beginner. Take your time, practice regularly, and don't be afraid to make mistakes - that's how you learn! Click on any topic above to continue your learning journey.</p>
+        </div>
+    </div>
+
+    <!-- Variables Section -->
+    <div id="variables" class="topic-content">
+        <h1>📦 PHP Variables</h1>
+        
+        <div class="intro-box">
+            <p>Variables are one of the most fundamental concepts in programming. Think of them as labeled containers or boxes where you can store information that your program needs to remember and use.</p>
+        </div>
+
+        <h2>🤔 What is a Variable?</h2>
+        <p>A <strong>variable</strong> is like a container with a name label on it. You can put different types of information inside this container (like numbers, text, or true/false values), and you can use that information throughout your program.</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Analogy:</h3>
+            <p>Imagine you're organizing your school supplies:</p>
+            <ul>
+                <li>You have a <strong>pencil box</strong> labeled "pencils" containing pencils</li>
+                <li>A <strong>folder</strong> labeled "homework" containing your homework papers</li>
+                <li>A <strong>notebook</strong> labeled "math" for math notes</li>
+            </ul>
+            <p>In PHP, variables work the same way - they're labeled containers holding different types of data!</p>
+        </div>
+
+        <h2>📝 How to Create Variables in PHP</h2>
+        <p>In PHP, all variable names start with a dollar sign <code>$</code> followed by the variable name. This is what makes PHP unique compared to other languages!</p>
+
+        <pre>&lt;?php
+  $name = "John";        // Storing text (string)
+  $age = 25;             // Storing a number (integer)
+  $price = 99.99;        // Storing a decimal number (float)
+  $isStudent = true;     // Storing true/false (boolean)
+?&gt;</pre>
+
+        <div class="explanation-box">
+            <h4>🔍 Understanding the Syntax:</h4>
+            <ul>
+                <li><code>$</code> - Always starts a variable name in PHP</li>
+                <li><code>name</code> - The variable's name (you choose this)</li>
+                <li><code>=</code> - The assignment operator (means "store this value")</li>
+                <li><code>"John"</code> - The value you're storing</li>
+                <li><code>;</code> - Ends the statement</li>
+            </ul>
+        </div>
+
+        <h2>📋 Variable Naming Rules</h2>
+        <p>When creating variables, you must follow these important rules:</p>
+
+        <div class="rules-list">
+            <div class="rule-item correct">
+                <h4>✅ Correct Variable Names:</h4>
+                <pre>$name
+$firstName
+$age_in_years
+$_total
+$price2024</pre>
+            </div>
+            <div class="rule-item incorrect">
+                <h4>❌ Incorrect Variable Names:</h4>
+                <pre>$2name         // Can't start with a number
+$first-name    // Can't use hyphens
+$first name    // Can't have spaces
+$@price        // Can't use special symbols (except _)</pre>
+            </div>
+        </div>
+
+        <div class="important-note">
+            <strong>⚠️ Case Sensitivity:</strong> PHP variables are case-sensitive! This means <code>$name</code>, <code>$Name</code>, and <code>$NAME</code> are three completely different variables. Be consistent with your naming!
+        </div>
+
+        <h2>🎨 Data Types in PHP</h2>
+        <p>Variables can store different types of data. PHP automatically detects the data type, which makes it beginner-friendly. Here are the main types:</p>
+
+        <h3>1. String (Text)</h3>
+        <p>Strings are sequences of characters - basically any text. Always enclosed in quotes.</p>
+        <pre>&lt;?php
+  $greeting = "Hello, World!";
+  $name = 'Alice';  // Single or double quotes both work
+  $message = "Welcome to PHP programming!";
+  
+  echo $greeting;  // Outputs: Hello, World!
+?&gt;</pre>
+
+        <h3>2. Integer (Whole Numbers)</h3>
+        <p>Integers are whole numbers without decimal points. They can be positive or negative.</p>
+        <pre>&lt;?php
+  $age = 25;
+  $year = 2024;
+  $temperature = -10;
+  $score = 0;
+  
+  echo $age;  // Outputs: 25
+?&gt;</pre>
+
+        <h3>3. Float (Decimal Numbers)</h3>
+        <p>Floats are numbers with decimal points, also called "floating-point numbers."</p>
+        <pre>&lt;?php
+  $price = 99.99;
+  $weight = 65.5;
+  $pi = 3.14159;
+  
+  echo $price;  // Outputs: 99.99
+?&gt;</pre>
+
+        <h3>4. Boolean (True/False)</h3>
+        <p>Booleans represent yes/no, on/off, or true/false values. Very useful for conditions and logic.</p>
+        <pre>&lt;?php
+  $isLoggedIn = true;
+  $hasPermission = false;
+  $isStudent = true;
+  
+  if ($isLoggedIn) {
+    echo "Welcome back!";
+  }
+?&gt;</pre>
+
+        <h2>🔄 Using Variables</h2>
+        <p>Once you've stored data in a variable, you can use it anywhere in your code. This is where variables become really powerful!</p>
+
+        <pre>&lt;?php
+  // Store user information
+  $userName = "Sarah";
+  $userAge = 22;
+  $userCity = "New York";
+  
+  // Use the variables to create personalized messages
+  echo "Hello, " . $userName . "!";
+  echo "You are " . $userAge . " years old.";
+  echo "You live in " . $userCity . ".";
+  
+  // Output:
+  // Hello, Sarah!
+  // You are 22 years old.
+  // You live in New York.
+?&gt;</pre>
+
+        <div class="learn-box">
+            <h3>💡 Why Use Variables?</h3>
+            <p>Imagine you need to use someone's name 50 times in your code. Without variables, you'd have to type "Sarah" 50 times. If you need to change it to "Sara" (different spelling), you'd have to find and change it 50 times!</p>
+            <p>With variables, you just change it once: <code>$userName = "Sara";</code> and it updates everywhere!</p>
+        </div>
+
+        <h2>🔢 Variable Operations</h2>
+        <p>You can perform operations with variables just like you do with regular numbers or text:</p>
+
+        <h3>Math Operations:</h3>
+        <pre>&lt;?php
+  $a = 10;
+  $b = 5;
+  
+  $sum = $a + $b;        // Addition: 15
+  $difference = $a - $b;  // Subtraction: 5
+  $product = $a * $b;     // Multiplication: 50
+  $quotient = $a / $b;    // Division: 2
+  
+  echo "Sum: " . $sum;
+?&gt;</pre>
+
+        <h3>String Operations (Concatenation):</h3>
+        <pre>&lt;?php
+  $firstName = "John";
+  $lastName = "Doe";
+  
+  // Combining strings with a dot (.)
+  $fullName = $firstName . " " . $lastName;
+  echo $fullName;  // Outputs: John Doe
+  
+  // Alternative way (for double quotes only)
+  echo "Hello, $firstName $lastName!";
+?&gt;</pre>
+
+        <h2>🌍 Variable Scope</h2>
+        <p><strong>Scope</strong> refers to where in your code a variable can be accessed. Think of it like different rooms in a house - some things are available everywhere, others only in specific rooms.</p>
+
+        <h3>Global Scope (Available Everywhere):</h3>
+        <pre>&lt;?php
+  $globalName = "Alice";  // Declared outside any function
+  
+  function greet() {
+    global $globalName;  // Must use 'global' keyword inside function
+    echo "Hello, " . $globalName;
+  }
+  
+  greet();  // Outputs: Hello, Alice
+?&gt;</pre>
+
+        <h3>Local Scope (Available Only Inside Function):</h3>
+        <pre>&lt;?php
+  function calculate() {
+    $result = 10 + 5;  // Local variable
+    echo $result;
+  }
+  
+  calculate();  // Outputs: 15
+  // echo $result;  // Error! $result doesn't exist outside the function
+?&gt;</pre>
+
+        <div class="tip-box">
+            <strong>💡 Best Practice:</strong> Use local variables whenever possible. They keep your code organized and prevent accidental changes to important data. Global variables should be used sparingly!
+        </div>
+
+        <h2>🔄 Changing Variable Values</h2>
+        <p>Variables are called "variables" because their values can vary (change) during program execution:</p>
+
+        <pre>&lt;?php
+  $score = 0;           // Starting score
+  echo $score;          // Outputs: 0
+  
+  $score = 10;          // Score changed
+  echo $score;          // Outputs: 10
+  
+  $score = $score + 5;  // Adding to current value
+  echo $score;          // Outputs: 15
+  
+  // Shortcut for adding to current value:
+  $score += 5;          // Same as $score = $score + 5;
+  echo $score;          // Outputs: 20
+?&gt;</pre>
+
+        <h2>🎯 Practical Example: Shopping Cart</h2>
+        <p>Let's see how variables work in a real-world scenario - a simple shopping cart:</p>
+
+        <pre>&lt;?php
+  // Product information
+  $productName = "Laptop";
+  $productPrice = 599.99;
+  $quantity = 2;
+  $taxRate = 0.08;  // 8% tax
+  
+  // Calculations
+  $subtotal = $productPrice * $quantity;
+  $tax = $subtotal * $taxRate;
+  $total = $subtotal + $tax;
+  
+  // Display receipt
+  echo "===== RECEIPT =====";
+  echo "Product: " . $productName;
+  echo "Price: $" . $productPrice;
+  echo "Quantity: " . $quantity;
+  echo "Subtotal: $" . $subtotal;
+  echo "Tax: $" . $tax;
+  echo "TOTAL: $" . $total;
+?&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Practice Exercise:</strong> Try creating variables for your own information: your name, age, favorite color, and hobbies. Then use <code>echo</code> to display them in a nice format!</p>
+        </div>
+    </div>
+
+    <!-- Functions Section -->
+    <div id="functions" class="topic-content">
+        <h1>⚙️ PHP Functions</h1>
+        
+        <div class="intro-box">
+            <p>Functions are reusable blocks of code that perform specific tasks. They're like mini-programs within your main program. Once you create a function, you can use it over and over again without rewriting the same code!</p>
+        </div>
+
+        <h2>🤔 What is a Function?</h2>
+        <p>A <strong>function</strong> is a named block of code that does a specific job. Instead of writing the same code multiple times, you write it once inside a function and then "call" (use) that function whenever you need it.</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Analogy:</h3>
+            <p>Think of a function like a coffee machine:</p>
+            <ul>
+                <li><strong>Input:</strong> You put in coffee beans and water</li>
+                <li><strong>Process:</strong> The machine grinds, brews, and heats</li>
+                <li><strong>Output:</strong> You get a cup of coffee</li>
+            </ul>
+            <p>You don't need to know how the machine works internally - you just press a button and get your coffee. Functions work the same way in programming!</p>
+        </div>
+
+        <h2>✨ Why Use Functions?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h4>1. Reusability</h4>
+                <p>Write code once, use it many times. No need to copy-paste the same code everywhere.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>2. Organization</h4>
+                <p>Break down complex programs into smaller, manageable pieces. Your code becomes easier to read and understand.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>3. Easier Debugging</h4>
+                <p>If something goes wrong, you only need to fix it in one place - inside the function.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>4. Teamwork</h4>
+                <p>Different team members can work on different functions, making collaboration easier.</p>
+            </div>
+        </div>
+
+        <h2>📝 Creating Your First Function</h2>
+        <p>The basic syntax for creating a function in PHP is simple:</p>
+
+        <pre>&lt;?php
+  function functionName() {
+    // Code to be executed goes here
+  }
+?&gt;</pre>
+
+        <h3>Simple Example:</h3>
+        <pre>&lt;?php
+  // Define the function
+  function sayHello() {
+    echo "Hello, welcome to PHP!";
+  }
+  
+  // Call (use) the function
+  sayHello();  // Outputs: Hello, welcome to PHP!
+  
+  // You can call it multiple times
+  sayHello();  // Outputs: Hello, welcome to PHP!
+  sayHello();  // Outputs: Hello, welcome to PHP!
+?&gt;</pre>
+
+        <div class="explanation-box">
+            <h4>🔍 Understanding the Syntax:</h4>
+            <ul>
+                <li><code>function</code> - Keyword that tells PHP you're creating a function</li>
+                <li><code>sayHello</code> - The name you give to your function (you choose this)</li>
+                <li><code>()</code> - Parentheses where parameters go (we'll learn about these next)</li>
+                <li><code>{ }</code> - Curly braces contain the code that runs when function is called</li>
+            </ul>
+        </div>
+
+        <h2>📥 Functions with Parameters</h2>
+        <p><strong>Parameters</strong> (also called arguments) are values you pass into a function to customize its behavior. They make functions much more flexible and powerful!</p>
+
+        <pre>&lt;?php
+  // Function with one parameter
+  function greetUser($name) {
+    echo "Hello, " . $name . "! Welcome to our website.";
+  }
+  
+  // Call the function with different names
+  greetUser("Sarah");   // Outputs: Hello, Sarah! Welcome to our website.
+  greetUser("John");    // Outputs: Hello, John! Welcome to our website.
+  greetUser("Ahmed");   // Outputs: Hello, Ahmed! Welcome to our website.
+?&gt;</pre>
+
+        <div class="learn-box">
+            <h3>💡 Think of Parameters Like This:</h3>
+            <p>Remember our coffee machine analogy? Parameters are like choosing different coffee types. The machine (function) stays the same, but you can make espresso, cappuccino, or latte by changing the input (parameter)!</p>
+        </div>
+
+        <h3>Multiple Parameters:</h3>
+        <p>Functions can accept multiple parameters separated by commas:</p>
+
+        <pre>&lt;?php
+  function introduce($name, $age, $city) {
+    echo "My name is " . $name . ".";
+    echo "I am " . $age . " years old.";
+    echo "I live in " . $city . ".";
+  }
+  
+  introduce("Alice", 25, "New York");
+  // Outputs:
+  // My name is Alice.
+  // I am 25 years old.
+  // I live in New York.
+?&gt;</pre>
+
+        <h2>↩️ Functions with Return Values</h2>
+        <p>Instead of just displaying information, functions can calculate something and <strong>return</strong> the result so you can use it elsewhere in your code.</p>
+
+        <pre>&lt;?php
+  function add($a, $b) {
+    $sum = $a + $b;
+    return $sum;  // Send the result back
+  }
+  
+  // Store the returned value in a variable
+  $result = add(10, 5);
+  echo $result;  // Outputs: 15
+  
+  // Or use it directly
+  echo add(20, 30);  // Outputs: 50
+  
+  // Use in calculations
+  $total = add(100, 50) + add(25, 75);
+  echo $total;  // Outputs: 250 (150 + 100)
+?&gt;</pre>
+
+        <div class="important-note">
+            <strong>🎯 Key Concept:</strong> When a function reaches a <code>return</code> statement, it immediately stops executing and sends the value back. Any code after <code>return</code> won't run!
+        </div>
+
+        <h2>🎨 Default Parameter Values</h2>
+        <p>You can set default values for parameters. If someone calls the function without providing that parameter, the default value is used:</p>
+
+        <pre>&lt;?php
+  function greet($name = "Guest", $time = "day") {
+    echo "Good " . $time . ", " . $name . "!";
+  }
+  
+  greet("Sarah", "morning");  // Outputs: Good morning, Sarah!
+  greet("John");              // Outputs: Good day, John!
+  greet();                    // Outputs: Good day, Guest!
+?&gt;</pre>
+
+        <div class="tip-box">
+            <strong>💡 Pro Tip:</strong> Default parameters should always come at the end of the parameter list. This prevents confusion when calling the function.
+        </div>
+
+        <h2>🔢 Practical Examples</h2>
+
+        <h3>Example 1: Calculator Functions</h3>
+        <pre>&lt;?php
+  function multiply($x, $y) {
+    return $x * $y;
+  }
+  
+  function divide($x, $y) {
+    if ($y == 0) {
+      return "Error: Cannot divide by zero!";
+    }
+    return $x / $y;
+  }
+  
+  function calculateArea($length, $width) {
+    return $length * $width;
+  }
+  
+  // Using the functions
+  echo multiply(5, 6);           // Outputs: 30
+  echo divide(20, 4);            // Outputs: 5
+  echo calculateArea(10, 5);     // Outputs: 50
+?&gt;</pre>
+
+        <h3>Example 2: Temperature Converter</h3>
+        <pre>&lt;?php
+  function celsiusToFahrenheit($celsius) {
+    $fahrenheit = ($celsius * 9/5) + 32;
+    return $fahrenheit;
+  }
+  
+  function fahrenheitToCelsius($fahrenheit) {
+    $celsius = ($fahrenheit - 32) * 5/9;
+    return $celsius;
+  }
+  
+  // Convert temperatures
+  echo celsiusToFahrenheit(0);    // Outputs: 32
+  echo celsiusToFahrenheit(100);  // Outputs: 212
+  echo fahrenheitToCelsius(32);   // Outputs: 0
+?&gt;</pre>
+
+        <h3>Example 3: Grade Calculator</h3>
+        <pre>&lt;?php
+  function calculateGrade($marks) {
+    if ($marks >= 90) {
+      return "A+";
+    } elseif ($marks >= 80) {
+      return "A";
+    } elseif ($marks >= 70) {
+      return "B";
+    } elseif ($marks >= 60) {
+      return "C";
+    } elseif ($marks >= 50) {
+      return "D";
+    } else {
+      return "F";
+    }
+  }
+  
+  // Test the function
+  echo calculateGrade(95);  // Outputs: A+
+  echo calculateGrade(75);  // Outputs: B
+  echo calculateGrade(45);  // Outputs: F
+?&gt;</pre>
+
+        <h2>🛠️ Built-in PHP Functions</h2>
+        <p>PHP comes with thousands of built-in functions that you can use without creating them yourself. Here are some commonly used ones:</p>
+
+        <h3>String Functions:</h3>
+        <pre>&lt;?php
+  $text = "Hello World";
+  
+  strlen($text);        // Returns length: 11
+  strtoupper($text);    // Converts to: HELLO WORLD
+  strtolower($text);    // Converts to: hello world
+  str_replace("World", "PHP", $text);  // Hello PHP
+?&gt;</pre>
+
+        <h3>Math Functions:</h3>
+        <pre>&lt;?php
+  abs(-15);        // Absolute value: 15
+  round(3.7);      // Round to nearest: 4
+  ceil(3.2);       // Round up: 4
+  floor(3.9);      // Round down: 3
+  max(5, 10, 3);   // Find largest: 10
+  min(5, 10, 3);   // Find smallest: 3
+  rand(1, 100);    // Random number between 1 and 100
+?&gt;</pre>
+
+        <h3>Date/Time Functions:</h3>
+        <pre>&lt;?php
+  date("Y-m-d");        // Current date: 2024-11-05
+  date("H:i:s");        // Current time: 14:30:45
+  date("l");            // Day of week: Wednesday
+  time();               // Current timestamp
+?&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Practice Challenge:</strong> Create a function that calculates the area of a circle. The formula is: area = π × radius². Use 3.14159 for π. Test it with different radius values!</p>
+            <details>
+                <summary>Click to see the solution</summary>
+                <pre>&lt;?php
+  function calculateCircleArea($radius) {
+    $pi = 3.14159;
+    $area = $pi * $radius * $radius;
+    return $area;
+  }
+  
+  echo calculateCircleArea(5);  // Outputs: 78.53975
+?&gt;</pre>
+            </details>
+        </div>
+    </div>
+    <!-- Strings Section -->
+    <div id="strings" class="topic-content">
+        <h1>📝 PHP Strings</h1>
+        
+        <div class="intro-box">
+            <p>Strings are one of the most commonly used data types in programming. Almost every program you write will work with text data - whether it's user names, messages, email addresses, or product descriptions. Let's learn how to master strings in PHP!</p>
+        </div>
+
+        <h2>🤔 What is a String?</h2>
+        <p>A <strong>string</strong> is simply a sequence of characters - letters, numbers, symbols, or spaces. In programming terms, any text is a string. Your name is a string, this sentence is a string, even "12345" (in quotes) is a string!</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Analogy:</h3>
+            <p>Think of a string like a necklace or bracelet made of beads:</p>
+            <ul>
+                <li>Each bead represents a character (letter, number, or symbol)</li>
+                <li>The beads are arranged in a specific order</li>
+                <li>You can add beads, remove beads, or rearrange them</li>
+                <li>The whole necklace is your string!</li>
+            </ul>
+        </div>
+
+        <h2>✍️ Creating Strings</h2>
+        <p>In PHP, you can create strings using either single quotes <code>'</code> or double quotes <code>"</code>:</p>
+
+        <pre>&lt;?php
+  // Using double quotes
+  $greeting = "Hello, World!";
+  
+  // Using single quotes
+  $name = 'Sarah';
+  
+  // Strings can contain numbers
+  $phoneNumber = "123-456-7890";
+  
+  // Empty string
+  $empty = "";
+  
+  // Multi-line string (using double quotes)
+  $message = "This is line one.
+This is line two.
+This is line three.";
+?&gt;</pre>
+
+        <h2>🔍 Single Quotes vs Double Quotes</h2>
+        <p>There's an important difference between single and double quotes in PHP:</p>
+
+        <div class="learn-box">
+            <h3>💡 Key Differences:</h3>
+            <ul>
+                <li><strong>Double Quotes (""):</strong> PHP processes special characters and variables inside them</li>
+                <li><strong>Single Quotes (''):</strong> PHP treats everything literally (exactly as written)</li>
+            </ul>
+        </div>
+
+        <pre>&lt;?php
+  $name = "John";
+  
+  // Double quotes - variable gets processed
+  echo "Hello, $name!";     // Outputs: Hello, John!
+  
+  // Single quotes - variable is treated as text
+  echo 'Hello, $name!';     // Outputs: Hello, $name!
+  
+  // Special characters work in double quotes
+  echo "Line 1\nLine 2";    // \n creates a new line
+  
+  // Special characters don't work in single quotes
+  echo 'Line 1\nLine 2';    // Outputs: Line 1\nLine 2 (literally)
+?&gt;</pre>
+
+        <div class="tip-box">
+            <strong>💡 Best Practice:</strong> Use double quotes when you need to include variables or special characters. Use single quotes for plain text - it's slightly faster!
+        </div>
+
+        <h2>🔗 String Concatenation (Joining Strings)</h2>
+        <p><strong>Concatenation</strong> means joining two or more strings together. In PHP, we use the dot operator <code>.</code> to concatenate strings:</p>
+
+        <pre>&lt;?php
+  $firstName = "John";
+  $lastName = "Doe";
+  
+  // Concatenating with dot operator
+  $fullName = $firstName . " " . $lastName;
+  echo $fullName;  // Outputs: John Doe
+  
+  // Concatenating multiple strings
+  $greeting = "Hello, " . $firstName . " " . $lastName . "!";
+  echo $greeting;  // Outputs: Hello, John Doe!
+  
+  // Concatenate and assign (shortcut)
+  $message = "Welcome";
+  $message .= " to PHP";  // Same as: $message = $message . " to PHP";
+  echo $message;  // Outputs: Welcome to PHP
+?&gt;</pre>
+
+        <h2>📏 Useful String Functions</h2>
+        <p>PHP provides many built-in functions to work with strings. Let's explore the most useful ones for beginners:</p>
+
+        <h3>1. strlen() - Find String Length</h3>
+        <p>Returns the number of characters in a string (including spaces):</p>
+        <pre>&lt;?php
+  $text = "Hello World";
+  $length = strlen($text);
+  echo $length;  // Outputs: 11 (including the space)
+  
+  // Practical use: Validating input
+  $password = "abc123";
+  if (strlen($password) &lt; 8) {
+    echo "Password must be at least 8 characters!";
+  }
+?&gt;</pre>
+
+        <h3>2. str_word_count() - Count Words</h3>
+        <p>Counts the number of words in a string:</p>
+        <pre>&lt;?php
+  $sentence = "PHP is fun to learn";
+  $wordCount = str_word_count($sentence);
+  echo $wordCount;  // Outputs: 5
+  
+  // Practical use: Blog post word counter
+  $blogPost = "This is my first blog post about PHP programming.";
+  echo "Word count: " . str_word_count($blogPost);
+?&gt;</pre>
+
+        <h3>3. strtoupper() and strtolower() - Change Case</h3>
+        <p>Convert strings to uppercase or lowercase:</p>
+        <pre>&lt;?php
+  $text = "Hello World";
+  
+  echo strtoupper($text);  // Outputs: HELLO WORLD
+  echo strtolower($text);  // Outputs: hello world
+  
+  // Practical use: Comparing user input (case-insensitive)
+  $userInput = "YES";
+  if (strtolower($userInput) == "yes") {
+    echo "User agreed!";
+  }
+?&gt;</pre>
+
+        <h3>4. ucfirst() and ucwords() - Capitalize</h3>
+        <p>Capitalize the first letter of a string or each word:</p>
+        <pre>&lt;?php
+  $name = "john doe";
+  
+  echo ucfirst($name);   // Outputs: John doe
+  echo ucwords($name);   // Outputs: John Doe
+  
+  // Practical use: Formatting names properly
+  $userName = "sarah johnson";
+  $formattedName = ucwords($userName);
+  echo "Welcome, " . $formattedName . "!";
+?&gt;</pre>
+
+        <h3>5. trim() - Remove Extra Spaces</h3>
+        <p>Removes whitespace from the beginning and end of a string:</p>
+        <pre>&lt;?php
+  $text = "   Hello World   ";
+  $cleaned = trim($text);
+  echo $cleaned;  // Outputs: Hello World (no extra spaces)
+  
+  // Practical use: Cleaning user input
+  $email = "  user@example.com  ";
+  $cleanEmail = trim($email);
+  echo $cleanEmail;  // Outputs: user@example.com
+?&gt;</pre>
+
+        <h3>6. substr() - Extract Part of String</h3>
+        <p>Extracts a portion of a string:</p>
+        <pre>&lt;?php
+  $text = "Hello World";
+  
+  // Extract from position 0, length 5
+  echo substr($text, 0, 5);   // Outputs: Hello
+  
+  // Extract from position 6 to end
+  echo substr($text, 6);      // Outputs: World
+  
+  // Extract last 5 characters
+  echo substr($text, -5);     // Outputs: World
+  
+  // Practical use: Creating username from email
+  $email = "john.doe@example.com";
+  $username = substr($email, 0, strpos($email, "@"));
+  echo $username;  // Outputs: john.doe
+?&gt;</pre>
+
+        <h3>7. str_replace() - Replace Text</h3>
+        <p>Replaces all occurrences of a search string with a replacement:</p>
+        <pre>&lt;?php
+  $text = "I love Java programming";
+  
+  // Replace Java with PHP
+  $newText = str_replace("Java", "PHP", $text);
+  echo $newText;  // Outputs: I love PHP programming
+  
+  // Replace multiple words
+  $message = "Hello World World";
+  $clean = str_replace("World", "PHP", $message);
+  echo $clean;  // Outputs: Hello PHP PHP
+  
+  // Practical use: Censoring bad words
+  $comment = "This is a bad word";
+  $censored = str_replace("bad", "***", $comment);
+  echo $censored;
+?&gt;</pre>
+
+        <h3>8. strpos() - Find Position</h3>
+        <p>Finds the position of the first occurrence of a substring:</p>
+        <pre>&lt;?php
+  $email = "user@example.com";
+  
+  // Find position of @
+  $position = strpos($email, "@");
+  echo $position;  // Outputs: 4
+  
+  // Check if substring exists
+  if (strpos($email, "@") !== false) {
+    echo "Valid email format";
+  }
+  
+  // Practical use: Check if text contains specific word
+  $text = "I love PHP programming";
+  if (strpos($text, "PHP") !== false) {
+    echo "This text mentions PHP!";
+  }
+?&gt;</pre>
+
+        <h3>9. strrev() - Reverse String</h3>
+        <p>Reverses a string:</p>
+        <pre>&lt;?php
+  $text = "Hello";
+  echo strrev($text);  // Outputs: olleH
+  
+  // Practical use: Check if word is a palindrome
+  $word = "racecar";
+  if ($word == strrev($word)) {
+    echo "$word is a palindrome!";
+  }
+?&gt;</pre>
+
+        <h3>10. explode() - Split String into Array</h3>
+        <p>Splits a string into an array of substrings:</p>
+        <pre>&lt;?php
+  $fruits = "apple,banana,orange,mango";
+  
+  // Split by comma
+  $fruitArray = explode(",", $fruits);
+  print_r($fruitArray);
+  // Outputs: Array([0]=&gt;apple [1]=&gt;banana [2]=&gt;orange [3]=&gt;mango)
+  
+  // Practical use: Processing CSV data
+  $csvLine = "John,Doe,25,New York";
+  $data = explode(",", $csvLine);
+  echo "Name: " . $data[0] . " " . $data[1];
+?&gt;</pre>
+
+        <h2>🎯 Practical Example: User Registration Form</h2>
+        <p>Let's see how string functions work together in a real scenario:</p>
+
+        <pre>&lt;?php
+  // Simulating user input from a form
+  $username = "  JohnDoe123  ";
+  $email = "  JOHN.DOE@EXAMPLE.COM  ";
+  $bio = "hello world! i love programming in java.";
+  
+  // Clean and format the data
+  $username = trim($username);              // Remove spaces
+  $email = trim(strtolower($email));        // Remove spaces and lowercase
+  $bio = ucfirst($bio);                     // Capitalize first letter
+  $bio = str_replace("java", "PHP", $bio);  // Replace Java with PHP
+  
+  // Validate username length
+  if (strlen($username) &lt; 5) {
+    echo "Username must be at least 5 characters!";
+  } else {
+    echo "Username: " . $username . "&lt;br&gt;";
+    echo "Email: " . $email . "&lt;br&gt;";
+    echo "Bio: " . $bio . "&lt;br&gt;";
+  }
+  
+  // Output:
+  // Username: JohnDoe123
+  // Email: john.doe@example.com
+  // Bio: Hello world! i love programming in PHP.
+?&gt;</pre>
+
+        <h2>🔐 String Escaping</h2>
+        <p>Sometimes you need to include special characters (like quotes) inside strings:</p>
+
+        <pre>&lt;?php
+  // Escaping double quotes inside double-quoted string
+  $message = "She said, \"Hello World!\"";
+  echo $message;  // Outputs: She said, "Hello World!"
+  
+  // Escaping single quotes inside single-quoted string
+  $text = 'It\'s a beautiful day';
+  echo $text;  // Outputs: It's a beautiful day
+  
+  // Alternative: Use different quote type
+  $message = 'She said, "Hello World!"';  // No escaping needed
+  $text = "It's a beautiful day";         // No escaping needed
+?&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Practice Exercise:</strong> Create a program that takes a full name (like "john doe smith") and formats it properly (like "John Doe Smith"). Then extract and display just the first name.</p>
+            <details>
+                <summary>Click to see the solution</summary>
+                <pre>&lt;?php
+  $fullName = "john doe smith";
+  
+  // Format the name properly
+  $formattedName = ucwords($fullName);
+  echo "Full Name: " . $formattedName . "&lt;br&gt;";
+  
+  // Extract first name
+  $firstName = substr($formattedName, 0, strpos($formattedName, " "));
+  echo "First Name: " . $firstName;
+  
+  // Output:
+  // Full Name: John Doe Smith
+  // First Name: John
+?&gt;</pre>
+            </details>
+        </div>
+    </div>
+
+    <!-- Arrays Section -->
+    <div id="arrays" class="topic-content">
+        <h1>📊 PHP Arrays</h1>
+        
+        <div class="intro-box">
+            <p>Imagine you need to store information about 100 students. Would you create 100 separate variables? Of course not! That's where arrays come in. Arrays let you store multiple values in a single variable, making your code cleaner and more efficient.</p>
+        </div>
+
+        <h2>🤔 What is an Array?</h2>
+        <p>An <strong>array</strong> is a special variable that can hold multiple values at once. Instead of creating separate variables for related data, you can group them together in one array.</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Analogy:</h3>
+            <p>Think of an array like a filing cabinet:</p>
+            <ul>
+                <li>The cabinet itself is the array variable</li>
+                <li>Each drawer is numbered (index 0, 1, 2, etc.)</li>
+                <li>Each drawer contains different documents (values)</li>
+                <li>You can quickly access any drawer by its number</li>
+            </ul>
+            <p>Or think of it like a shopping list where each item has a position number!</p>
+        </div>
+
+        <h2>📝 Types of Arrays in PHP</h2>
+        <p>PHP has three types of arrays:</p>
+
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h4>1. Indexed Arrays</h4>
+                <p>Arrays with numeric index (0, 1, 2, 3...)</p>
+            </div>
+            <div class="benefit-item">
+                <h4>2. Associative Arrays</h4>
+                <p>Arrays with named keys (like "name", "age", "email")</p>
+            </div>
+            <div class="benefit-item">
+                <h4>3. Multidimensional Arrays</h4>
+                <p>Arrays containing other arrays</p>
+            </div>
+        </div>
+
+        <h2>🔢 Indexed Arrays</h2>
+        <p>Indexed arrays use numbers (starting from 0) to access elements:</p>
+
+        <pre>&lt;?php
+  // Method 1: Using array() function
+  $fruits = array("Apple", "Banana", "Orange");
+  
+  // Method 2: Using short syntax (modern way)
+  $colors = ["Red", "Green", "Blue"];
+  
+  // Accessing array elements (remember: counting starts at 0!)
+  echo $fruits[0];  // Outputs: Apple
+  echo $fruits[1];  // Outputs: Banana
+  echo $fruits[2];  // Outputs: Orange
+  
+  echo $colors[0];  // Outputs: Red
+?&gt;</pre>
+
+        <div class="important-note">
+            <strong>⚠️ Remember:</strong> Array indexing starts at 0, not 1! So the first element is [0], the second is [1], and so on. This confuses beginners, but you'll get used to it quickly!
+        </div>
+
+        <h3>Creating and Modifying Indexed Arrays:</h3>
+        <pre>&lt;?php
+  // Create empty array
+  $numbers = [];
+  
+  // Add elements
+  $numbers[0] = 10;
+  $numbers[1] = 20;
+  $numbers[2] = 30;
+  
+  // Or add without specifying index (automatically uses next number)
+  $numbers[] = 40;  // Becomes index 3
+  $numbers[] = 50;  // Becomes index 4
+  
+  // Modify existing element
+  $numbers[1] = 25;  // Change 20 to 25
+  
+  // Display array
+  print_r($numbers);
+?&gt;</pre>
+
+        <h2>🏷️ Associative Arrays</h2>
+        <p>Associative arrays use descriptive names (keys) instead of numbers. This makes your code more readable and meaningful:</p>
+
+        <pre>&lt;?php
+  // Creating associative array
+  $student = array(
+    "name" =&gt; "Sarah Johnson",
+    "age" =&gt; 20,
+    "grade" =&gt; "A",
+    "city" =&gt; "New York"
+  );
+  
+  // Modern syntax
+  $user = [
+    "username" =&gt; "john123",
+    "email" =&gt; "john@example.com",
+    "role" =&gt; "admin"
+  ];
+  
+  // Accessing elements by key
+  echo $student["name"];   // Outputs: Sarah Johnson
+  echo $student["age"];    // Outputs: 20
+  echo $user["email"];     // Outputs: john@example.com
+?&gt;</pre>
+
+        <div class="learn-box">
+            <h3>💡 When to Use Associative Arrays?</h3>
+            <p>Use associative arrays when you want to give meaningful names to your data. For example:</p>
+            <ul>
+                <li>User profiles (name, email, password)</li>
+                <li>Product information (name, price, description)</li>
+                <li>Configuration settings (database_host, username, password)</li>
+            </ul>
+        </div>
+
+        <h3>Practical Example: Student Record</h3>
+        <pre>&lt;?php
+  $student = [
+    "firstName" =&gt; "John",
+    "lastName" =&gt; "Doe",
+    "age" =&gt; 21,
+    "major" =&gt; "Computer Science",
+    "gpa" =&gt; 3.8,
+    "isEnrolled" =&gt; true
+  ];
+  
+  // Display student information
+  echo "Student Name: " . $student["firstName"] . " " . $student["lastName"];
+  echo "Age: " . $student["age"];
+  echo "Major: " . $student["major"];
+  echo "GPA: " . $student["gpa"];
+  
+  // Check enrollment status
+  if ($student["isEnrolled"]) {
+    echo "Status: Currently Enrolled";
+  }
+?&gt;</pre>
+
+        <h2>📦 Multidimensional Arrays</h2>
+        <p>Multidimensional arrays are arrays that contain other arrays. Think of them as a table with rows and columns:</p>
+
+        <pre>&lt;?php
+  // Array of students (each student is an array)
+  $students = [
+    ["John", 20, "Male"],
+    ["Sarah", 22, "Female"],
+    ["Mike", 21, "Male"]
+  ];
+  
+  // Accessing elements
+  echo $students[0][0];  // Outputs: John (first student, first element)
+  echo $students[1][1];  // Outputs: 22 (second student, second element)
+  echo $students[2][2];  // Outputs: Male (third student, third element)
+?&gt;</pre>
+
+        <h3>Better Approach: Mixing Indexed and Associative Arrays</h3>
+        <pre>&lt;?php
+  $students = [
+    [
+      "name" =&gt; "John Doe",
+      "age" =&gt; 20,
+      "grade" =&gt; "A"
+    ],
+    [
+      "name" =&gt; "Sarah Smith",
+      "age" =&gt; 22,
+      "grade" =&gt; "B+"
+    ],
+    [
+      "name" =&gt; "Mike Johnson",
+      "age" =&gt; 21,
+      "grade" =&gt; "A-"
+    ]
+  ];
+  
+  // Access data
+  echo $students[0]["name"];   // Outputs: John Doe
+  echo $students[1]["age"];    // Outputs: 22
+  echo $students[2]["grade"];  // Outputs: A-
+?&gt;</pre>
+
+        <h2>🔧 Essential Array Functions</h2>
+
+        <h3>1. count() - Get Array Length</h3>
+        <pre>&lt;?php
+  $fruits = ["Apple", "Banana", "Orange", "Mango"];
+  $total = count($fruits);
+  echo $total;  // Outputs: 4
+  
+  // Practical use: Check if array is empty
+  if (count($fruits) &gt; 0) {
+    echo "We have fruits in stock!";
+  }
+?&gt;</pre>
+
+        <h3>2. array_push() - Add Elements to End</h3>
+        <pre>&lt;?php
+  $colors = ["Red", "Green"];
+  
+  // Add one element
+  array_push($colors, "Blue");
+  
+  // Add multiple elements
+  array_push($colors, "Yellow", "Purple");
+  
+  print_r($colors);
+  // Outputs: Array([0]=&gt;Red [1]=&gt;Green [2]=&gt;Blue [3]=&gt;Yellow [4]=&gt;Purple)
+?&gt;</pre>
+
+        <h3>3. array_pop() - Remove Last Element</h3>
+        <pre>&lt;?php
+  $numbers = [10, 20, 30, 40];
+  
+  $lastNumber = array_pop($numbers);
+  echo $lastNumber;  // Outputs: 40
+  
+  print_r($numbers);  // Now contains: [10, 20, 30]
+?&gt;</pre>
+
+        <h3>4. array_shift() - Remove First Element</h3>
+        <pre>&lt;?php
+  $queue = ["First", "Second", "Third"];
+  
+  $removed = array_shift($queue);
+  echo $removed;  // Outputs: First
+  
+  print_r($queue);  // Now contains: ["Second", "Third"]
+?&gt;</pre>
+
+        <h3>5. array_unshift() - Add Elements to Beginning</h3>
+        <pre>&lt;?php
+  $numbers = [20, 30];
+  
+  array_unshift($numbers, 10);
+  
+  print_r($numbers);  // Outputs: [10, 20, 30]
+?&gt;</pre>
+
+        <h3>6. in_array() - Check if Value Exists</h3>
+        <pre>&lt;?php
+  $fruits = ["Apple", "Banana", "Orange"];
+  
+  if (in_array("Banana", $fruits)) {
+    echo "Banana is in the array!";
+  }
+  
+  // Practical use: Check user permissions
+  $userPermissions = ["read", "write", "delete"];
+  if (in_array("delete", $userPermissions)) {
+    echo "User can delete files";
+  }
+?&gt;</pre>
+
+        <h3>7. array_search() - Find Key of Value</h3>
+        <pre>&lt;?php
+  $colors = ["Red", "Green", "Blue"];
+  
+  $position = array_search("Green", $colors);
+  echo $position;  // Outputs: 1
+  
+  if ($position !== false) {
+    echo "Green found at position " . $position;
+  }
+?&gt;</pre>
+
+        <h3>8. sort() and rsort() - Sort Arrays</h3>
+        <pre>&lt;?php
+  $numbers = [5, 2, 8, 1, 9];
+  
+  // Sort in ascending order
+  sort($numbers);
+  print_r($numbers);  // Outputs: [1, 2, 5, 8, 9]
+  
+  // Sort in descending order
+  rsort($numbers);
+  print_r($numbers);  // Outputs: [9, 8, 5, 2, 1]
+  
+  // Sort strings alphabetically
+  $names = ["John", "Alice", "Bob"];
+  sort($names);
+  print_r($names);  // Outputs: [Alice, Bob, John]
+?&gt;</pre>
+
+        <h3>9. array_merge() - Combine Arrays</h3>
+        <pre>&lt;?php
+  $fruits1 = ["Apple", "Banana"];
+  $fruits2 = ["Orange", "Mango"];
+  
+  $allFruits = array_merge($fruits1, $fruits2);
+  print_r($allFruits);
+  // Outputs: [Apple, Banana, Orange, Mango]
+?&gt;</pre>
+
+        <h3>10. array_slice() - Extract Portion of Array</h3>
+        <pre>&lt;?php
+  $numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  
+  // Get elements from index 2, length 4
+  $slice = array_slice($numbers, 2, 4);
+  print_r($slice);  // Outputs: [3, 4, 5, 6]
+  
+  // Get last 3 elements
+  $lastThree = array_slice($numbers, -3);
+  print_r($lastThree);  // Outputs: [8, 9, 10]
+?&gt;</pre>
+
+        <h2>🔄 Looping Through Arrays</h2>
+        <p>One of the most powerful features of arrays is the ability to loop through all elements easily:</p>
+
+        <h3>Method 1: foreach Loop (Recommended)</h3>
+        <pre>&lt;?php
+  $fruits = ["Apple", "Banana", "Orange", "Mango"];
+  
+  foreach ($fruits as $fruit) {
+    echo $fruit . "&lt;br&gt;";
+  }
+  
+  // Output:
+  // Apple
+  // Banana
+  // Orange
+  // Mango
+?&gt;</pre>
+
+        <h3>Method 2: foreach with Index and Value</h3>
+        <pre>&lt;?php
+  $colors = ["Red", "Green", "Blue"];
+  
+  foreach ($colors as $index =&gt; $color) {
+    echo "Index " . $index . ": " . $color . "&lt;br&gt;";
+  }
+  
+  // Output:
+  // Index 0: Red
+  // Index 1: Green
+  // Index 2: Blue
+?&gt;</pre>
+
+        <h3>Method 3: Looping Associative Arrays</h3>
+        <pre>&lt;?php
+  $student = [
+    "name" =&gt; "John Doe",
+    "age" =&gt; 20,
+    "grade" =&gt; "A"
+  ];
+  
+  foreach ($student as $key =&gt; $value) {
+    echo $key . ": " . $value . "&lt;br&gt;";
+  }
+  
+  // Output:
+  // name: John Doe
+  // age: 20
+  // grade: A
+?&gt;</pre>
+
+        <h3>Method 4: Traditional for Loop</h3>
+        <pre>&lt;?php
+  $numbers = [10, 20, 30, 40, 50];
+  
+  for ($i = 0; $i &lt; count($numbers); $i++) {
+    echo $numbers[$i] . "&lt;br&gt;";
+  }
+?&gt;</pre>
+
+        <h2>🎯 Practical Example: Shopping Cart</h2>
+        <pre>&lt;?php
+  // Shopping cart with products
+  $cart = [
+    [
+      "name" =&gt; "Laptop",
+      "price" =&gt; 599.99,
+      "quantity" =&gt; 1
+    ],
+    [
+      "name" =&gt; "Mouse",
+      "price" =&gt; 29.99,
+      "quantity" =&gt; 2
+    ],
+    [
+      "name" =&gt; "Keyboard",
+      "price" =&gt; 79.99,
+      "quantity" =&gt; 1
+    ]
+  ];
+  
+  $total = 0;
+  
+  echo "===== SHOPPING CART =====&lt;br&gt;";
+  
+  foreach ($cart as $item) {
+    $itemTotal = $item["price"] * $item["quantity"];
+    $total += $itemTotal;
+    
+    echo $item["name"] . " - $" . $item["price"];
+    echo " x " . $item["quantity"] . " = $" . $itemTotal . "&lt;br&gt;";
+  }
+  
+  echo "-------------------------&lt;br&gt;";
+  echo "TOTAL: $" . $total;
+  
+  // Output:
+  // ===== SHOPPING CART =====
+  // Laptop - $599.99 x 1 = $599.99
+  // Mouse - $29.99 x 2 = $59.98
+  // Keyboard - $79.99 x 1 = $79.99
+  // -------------------------
+  // TOTAL: $739.96
+?&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Practice Exercise:</strong> Create an array of 5 student names. Add 2 more students to the array. Sort the array alphabetically. Then display all student names with their position number (1, 2, 3...).</p>
+            <details>
+                <summary>Click to see the solution</summary>
+                <pre>&lt;?php
+  // Initial array
+  $students = ["John", "Sarah", "Mike", "Emma", "David"];
+  
+  // Add 2 more students
+  array_push($students, "Alice", "Bob");
+  
+  // Sort alphabetically
+  sort($students);
+  
+  // Display with position numbers
+  echo "Student List:&lt;br&gt;";
+  foreach ($students as $index =&gt; $student) {
+    $position = $index + 1;  // Start from 1 instead of 0
+    echo $position . ". " . $student . "&lt;br&gt;";
+  }
+?&gt;</pre>
+            </details>
+        </div>
+    </div>
+
+    <!-- Forms Section -->
+    <div id="forms" class="topic-content">
+        <h1>📋 PHP Forms</h1>
+        
+        <div class="intro-box">
+            <p>Forms are the primary way users interact with your website. Whether it's signing up for an account, posting a comment, or making a purchase - forms are everywhere! PHP makes it easy to collect, process, and validate form data from users.</p>
+        </div>
+
+        <h2>🤔 What are PHP Forms?</h2>
+        <p>A <strong>PHP form</strong> is a combination of HTML (to create the form interface) and PHP (to process the data submitted by users). When a user fills out a form and clicks submit, PHP receives that data and can do various things with it - save to database, send emails, validate input, etc.</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Analogy:</h3>
+            <p>Think of a form like a restaurant order:</p>
+            <ul>
+                <li><strong>HTML Form:</strong> The menu and order form you fill out</li>
+                <li><strong>Submit Button:</strong> Handing your order to the waiter</li>
+                <li><strong>PHP Processing:</strong> The kitchen receiving and preparing your order</li>
+                <li><strong>Response:</strong> Your food being delivered to your table</li>
+            </ul>
+        </div>
+
+        <h2>📨 Form Submission Methods</h2>
+        <p>There are two main methods to submit form data:</p>
+
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h4>GET Method</h4>
+                <p><strong>Visible:</strong> Data appears in the URL</p>
+                <p><strong>Use for:</strong> Search queries, filters, non-sensitive data</p>
+                <p><strong>Example:</strong> Google searches</p>
+            </div>
+            <div class="benefit-item">
+                <h4>POST Method</h4>
+                <p><strong>Hidden:</strong> Data sent in the background</p>
+                <p><strong>Use for:</strong> Login forms, registration, sensitive data</p>
+                <p><strong>Example:</strong> Login pages, sign-up forms</p>
+            </div>
+        </div>
+
+        <h2>🔍 GET Method Example</h2>
+        <p>The GET method appends data to the URL, making it visible. It's perfect for search forms and filtering:</p>
+
+        <h3>HTML Form (search.html):</h3>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Search Form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Search Products&lt;/h2&gt;
+    &lt;form action="search.php" method="GET"&gt;
+        &lt;label&gt;Search:&lt;/label&gt;
+        &lt;input type="text" name="query" placeholder="Enter product name"&gt;
+        &lt;input type="submit" value="Search"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h3>PHP Processing File (search.php):</h3>
+        <pre>&lt;?php
+  // Get the search query from URL
+  $searchQuery = $_GET['query'];
+  
+  // Display the search term
+  echo "You searched for: " . $searchQuery;
+  
+  // In real application, you would search database here
+  echo "&lt;br&gt;Searching for products matching '" . $searchQuery . "'...";
+?&gt;</pre>
+
+        <div class="explanation-box">
+            <h4>🔍 How GET Works:</h4>
+            <ul>
+                <li>When form is submitted, URL becomes: <code>search.php?query=laptop</code></li>
+                <li>Data appears after the <code>?</code> in the URL</li>
+                <li><code>$_GET['query']</code> retrieves the value from the URL</li>
+                <li>Users can bookmark the URL with search results</li>
+            </ul>
+        </div>
+
+        <div class="important-note">
+            <strong>⚠️ Security Warning:</strong> Never use GET method for passwords or sensitive information! Anyone can see the data in the URL, and it gets saved in browser history.
+        </div>
+
+        <h2>🔒 POST Method Example</h2>
+        <p>The POST method sends data invisibly in the background. Use this for login forms, registration, and any sensitive data:</p>
+
+        <h3>HTML Form (register.html):</h3>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Registration Form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;User Registration&lt;/h2&gt;
+    &lt;form action="register.php" method="POST"&gt;
+        &lt;label&gt;Full Name:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="text" name="fullname" required&gt;&lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;Email:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;Password:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="password" name="password" required&gt;&lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;Age:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="number" name="age" min="13" max="120"&gt;&lt;br&gt;&lt;br&gt;
+        
+        &lt;input type="submit" value="Register"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h3>PHP Processing File (register.php):</h3>
+        <pre>&lt;?php
+  // Get data from POST request
+  $fullname = $_POST['fullname'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $age = $_POST['age'];
+  
+  // Display received data
+  echo "&lt;h2&gt;Registration Successful!&lt;/h2&gt;";
+  echo "Name: " . $fullname . "&lt;br&gt;";
+  echo "Email: " . $email . "&lt;br&gt;";
+  echo "Age: " . $age . "&lt;br&gt;";
+  
+  // In real application:
+  // - Validate data
+  // - Hash the password
+  // - Save to database
+?&gt;</pre>
+
+        <div class="explanation-box">
+            <h4>🔍 How POST Works:</h4>
+            <ul>
+                <li>Data is sent in the HTTP request body (invisible)</li>
+                <li>URL remains clean: <code>register.php</code></li>
+                <li><code>$_POST['fieldname']</code> retrieves the submitted value</li>
+                <li>More secure for sensitive information</li>
+                <li>Can handle large amounts of data</li>
+            </ul>
+        </div>
+
+        <h2>✅ Form Validation</h2>
+        <p>Always validate user input! Users might enter wrong data accidentally or maliciously. Here's how to validate properly:</p>
+
+        <pre>&lt;?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $errors = [];
+    
+    // Get form data
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $age = $_POST['age'];
+    
+    // Validate name
+    if (empty($name)) {
+      $errors[] = "Name is required";
+    } elseif (strlen($name) &lt; 3) {
+      $errors[] = "Name must be at least 3 characters";
+    }
+    
+    // Validate email
+    if (empty($email)) {
+      $errors[] = "Email is required";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $errors[] = "Invalid email format";
+    }
+    
+    // Validate age
+    if (empty($age)) {
+      $errors[] = "Age is required";
+    } elseif ($age &lt; 13) {
+      $errors[] = "You must be at least 13 years old";
+    } elseif ($age &gt; 120) {
+      $errors[] = "Please enter a valid age";
+    }
+    
+    // Check if there are errors
+    if (count($errors) &gt; 0) {
+      echo "&lt;h3&gt;Please fix the following errors:&lt;/h3&gt;";
+      foreach ($errors as $error) {
+        echo "&lt;p style='color: red;'&gt;• " . $error . "&lt;/p&gt;";
+      }
+    } else {
+      echo "&lt;h3 style='color: green;'&gt;Registration Successful!&lt;/h3&gt;";
+      echo "Welcome, " . $name . "!";
+    }
+  }
+?&gt;</pre>
+
+        <h2>🛡️ Preventing XSS Attacks</h2>
+        <p><strong>XSS (Cross-Site Scripting)</strong> is when attackers inject malicious code into your website. Always sanitize user input:</p>
+
+        <pre>&lt;?php
+  // Function to clean and secure user input
+  function sanitize_input($data) {
+    $data = trim($data);                // Remove extra spaces
+    $data = stripslashes($data);        // Remove backslashes
+    $data = htmlspecialchars($data);    // Convert special characters to HTML entities
+    return $data;
+  }
+  
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Clean all input data
+    $name = sanitize_input($_POST['name']);
+    $email = sanitize_input($_POST['email']);
+    $message = sanitize_input($_POST['message']);
+    
+    echo "Name: " . $name . "&lt;br&gt;";
+    echo "Email: " . $email . "&lt;br&gt;";
+    echo "Message: " . $message;
+  }
+?&gt;</pre>
+
+        <div class="important-note">
+            <strong>🔐 Security Best Practices:</strong>
+            <ul>
+                <li>Always use <code>htmlspecialchars()</code> before displaying user input</li>
+                <li>Validate data on the server-side (not just with HTML5 validation)</li>
+                <li>Never trust user input - always sanitize it</li>
+                <li>Use prepared statements for database queries (we'll learn this in Database section)</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Complete Form Example: Contact Form</h2>
+        <p>Let's build a complete, secure contact form with validation:</p>
+
+        <pre>&lt;?php
+  $nameErr = $emailErr = $messageErr = "";
+  $name = $email = $message = "";
+  $success = "";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $valid = true;
+    
+    // Validate name
+    if (empty($_POST["name"])) {
+      $nameErr = "Name is required";
+      $valid = false;
+    } else {
+      $name = sanitize_input($_POST["name"]);
+      if (strlen($name) &lt; 3) {
+        $nameErr = "Name must be at least 3 characters";
+        $valid = false;
+      }
+    }
+    
+    // Validate email
+    if (empty($_POST["email"])) {
+      $emailErr = "Email is required";
+      $valid = false;
+    } else {
+      $email = sanitize_input($_POST["email"]);
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format";
+        $valid = false;
+      }
+    }
+    
+    // Validate message
+    if (empty($_POST["message"])) {
+      $messageErr = "Message is required";
+      $valid = false;
+    } else {
+      $message = sanitize_input($_POST["message"]);
+      if (strlen($message) &lt; 10) {
+        $messageErr = "Message must be at least 10 characters";
+        $valid = false;
+      }
+    }
+    
+    // If all valid, process the form
+    if ($valid) {
+      $success = "Thank you! Your message has been sent successfully.";
+      // Here you would send email or save to database
+      
+      // Clear form
+      $name = $email = $message = "";
+    }
+  }
+
+  function sanitize_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Contact Form&lt;/title&gt;
+    &lt;style&gt;
+        .error { color: red; font-size: 14px; }
+        .success { color: green; font-size: 16px; font-weight: bold; }
+        input, textarea { display: block; margin: 10px 0; padding: 8px; width: 300px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Contact Us&lt;/h2&gt;
+    
+    &lt;?php if($success): ?&gt;
+        &lt;p class="success"&gt;&lt;?php echo $success; ?&gt;&lt;/p&gt;
+    &lt;?php endif; ?&gt;
+    
+    &lt;form method="POST" action="&lt;?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?&gt;"&gt;
+        &lt;label&gt;Name:&lt;/label&gt;
+        &lt;input type="text" name="name" value="&lt;?php echo $name; ?&gt;"&gt;
+        &lt;span class="error"&gt;&lt;?php echo $nameErr; ?&gt;&lt;/span&gt;
+        
+        &lt;label&gt;Email:&lt;/label&gt;
+        &lt;input type="text" name="email" value="&lt;?php echo $email; ?&gt;"&gt;
+        &lt;span class="error"&gt;&lt;?php echo $emailErr; ?&gt;&lt;/span&gt;
+        
+        &lt;label&gt;Message:&lt;/label&gt;
+        &lt;textarea name="message" rows="5"&gt;&lt;?php echo $message; ?&gt;&lt;/textarea&gt;
+        &lt;span class="error"&gt;&lt;?php echo $messageErr; ?&gt;&lt;/span&gt;
+        
+        &lt;input type="submit" value="Send Message"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Practice Exercise:</strong> Create a simple login form with username and password fields. Validate that both fields are not empty and that the password is at least 6 characters long. Display appropriate error messages.</p>
+        </div>
+    </div>
+
+    <!-- Database Section -->
+    <div id="database" class="topic-content">
+        <h1>🗄️ PHP Database Connectivity (MySQL)</h1>
+        
+        <div class="intro-box">
+            <p>Databases are the backbone of modern web applications. They store all your data - user accounts, products, posts, orders, and much more. PHP makes it easy to connect to databases, retrieve information, and save new data. Let's learn how to work with MySQL, the most popular database for PHP!</p>
+        </div>
+
+        <h2>🤔 What is a Database?</h2>
+        <p>A <strong>database</strong> is an organized collection of data stored electronically. Think of it as a smart filing cabinet that can store millions of records and retrieve them instantly.</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Analogy:</h3>
+            <p>Think of a database like a library:</p>
+            <ul>
+                <li><strong>Database:</strong> The entire library building</li>
+                <li><strong>Tables:</strong> Different sections (Fiction, Non-Fiction, Reference)</li>
+                <li><strong>Rows:</strong> Individual books on the shelves</li>
+                <li><strong>Columns:</strong> Book properties (Title, Author, Year, ISBN)</li>
+                <li><strong>SQL:</strong> The librarian who helps you find and organize books</li>
+            </ul>
+        </div>
+
+        <h2>🔌 Connecting to MySQL Database</h2>
+        <p>Before working with data, you need to establish a connection to your database. There are two ways to connect: <strong>MySQLi</strong> (MySQL Improved) and <strong>PDO</strong> (PHP Data Objects). We'll focus on MySQLi as it's beginner-friendly.</p>
+
+        <h3>Connection Information You Need:</h3>
+        <div class="learn-box">
+            <ul>
+                <li><strong>Server Name:</strong> Usually "localhost" (your computer)</li>
+                <li><strong>Username:</strong> Database username (default: "root")</li>
+                <li><strong>Password:</strong> Database password (often empty for localhost)</li>
+                <li><strong>Database Name:</strong> The specific database you want to use</li>
+            </ul>
+        </div>
+
+        <h3>Method 1: Procedural Style (Simple)</h3>
+        <pre>&lt;?php
+  // Database connection details
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $database = "myWebsite";
+  
+  // Create connection
+  $conn = mysqli_connect($servername, $username, $password, $database);
+  
+  // Check if connection was successful
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+  
+  echo "Connected successfully to database!";
+  
+  // Always close connection when done
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <h3>Method 2: Object-Oriented Style (Modern)</h3>
+        <pre>&lt;?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $database = "myWebsite";
+  
+  // Create connection object
+  $conn = new mysqli($servername, $username, $password, $database);
+  
+  // Check connection
+  if ($conn-&gt;connect_error) {
+    die("Connection failed: " . $conn-&gt;connect_error);
+  }
+  
+  echo "Connected successfully!";
+  
+  $conn-&gt;close();
+?&gt;</pre>
+
+        <div class="tip-box">
+            <strong>💡 Pro Tip:</strong> Create a separate file (like <code>db_connect.php</code>) for your database connection and include it in other files. This way, you only need to update connection details in one place!
+        </div>
+
+        <h2>🏗️ Creating a Database</h2>
+        <p>Before storing data, you need to create a database:</p>
+
+        <pre>&lt;?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  
+  // Connect without specifying database
+  $conn = mysqli_connect($servername, $username, $password);
+  
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+  
+  // Create database
+  $sql = "CREATE DATABASE myWebsite";
+  
+  if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully!";
+  } else {
+    echo "Error creating database: " . mysqli_error($conn);
+  }
+  
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <h2>📊 Creating Tables</h2>
+        <p>Tables store your actual data. Let's create a users table:</p>
+
+        <pre>&lt;?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $database = "myWebsite";
+  
+  $conn = mysqli_connect($servername, $username, $password, $database);
+  
+  // SQL to create table
+  $sql = "CREATE TABLE users (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    age INT(3),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  )";
+  
+  if (mysqli_query($conn, $sql)) {
+    echo "Table 'users' created successfully!";
+  } else {
+    echo "Error creating table: " . mysqli_error($conn);
+  }
+  
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <div class="explanation-box">
+            <h4>🔍 Understanding Table Structure:</h4>
+            <ul>
+                <li><code>id</code> - Unique identifier for each user (automatically increases)</li>
+                <li><code>username</code> - Stores username (max 50 characters)</li>
+                <li><code>email</code> - Stores email (max 100 characters)</li>
+                <li><code>password</code> - Stores hashed password</li>
+                <li><code>age</code> - Stores age as number</li>
+                <li><code>created_at</code> - Automatically stores registration date/time</li>
+            </ul>
+        </div>
+
+        <h2>➕ Inserting Data (CREATE)</h2>
+        <p>Now let's add users to our database:</p>
+
+        <pre>&lt;?php
+  $conn = mysqli_connect("localhost", "root", "", "myWebsite");
+  
+  // Prepare data to insert
+  $username = "john_doe";
+  $email = "john@example.com";
+  $password = password_hash("mypassword123", PASSWORD_DEFAULT); // Always hash passwords!
+  $age = 25;
+  
+  // SQL query to insert data
+  $sql = "INSERT INTO users (username, email, password, age) 
+          VALUES ('$username', '$email', '$password', $age)";
+  
+  if (mysqli_query($conn, $sql)) {
+    echo "New user registered successfully!";
+    echo "User ID: " . mysqli_insert_id($conn); // Get the auto-generated ID
+  } else {
+    echo "Error: " . mysqli_error($conn);
+  }
+  
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <div class="important-note">
+            <strong>🔐 Security Warning:</strong> The example above is vulnerable to SQL injection! Never insert user input directly into queries. Always use prepared statements (shown below).
+        </div>
+
+        <h2>🛡️ Secure Insert with Prepared Statements</h2>
+        <p>This is the CORRECT and SECURE way to insert data:</p>
+
+        <pre>&lt;?php
+  $conn = mysqli_connect("localhost", "root", "", "myWebsite");
+  
+  // User data (could come from $_POST)
+  $username = "sarah_smith";
+  $email = "sarah@example.com";
+  $password = password_hash("securepass456", PASSWORD_DEFAULT);
+  $age = 28;
+  
+  // Prepare statement
+  $stmt = $conn-&gt;prepare("INSERT INTO users (username, email, password, age) VALUES (?, ?, ?, ?)");
+  
+  // Bind parameters (s = string, i = integer)
+  $stmt-&gt;bind_param("sssi", $username, $email, $password, $age);
+  
+  // Execute
+  if ($stmt-&gt;execute()) {
+    echo "User registered successfully!";
+  } else {
+    echo "Error: " . $stmt-&gt;error;
+  }
+  
+  $stmt-&gt;close();
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <h2>📖 Reading Data (SELECT)</h2>
+        <p>Retrieve data from your database:</p>
+
+        <h3>Select All Users:</h3>
+        <pre>&lt;?php
+  $conn = mysqli_connect("localhost", "root", "", "myWebsite");
+  
+  $sql = "SELECT id, username, email, age FROM users";
+  $result = mysqli_query($conn, $sql);
+  
+  if (mysqli_num_rows($result) &gt; 0) {
+    echo "&lt;h3&gt;All Users:&lt;/h3&gt;";
+    
+    // Loop through each row
+    while($row = mysqli_fetch_assoc($result)) {
+      echo "ID: " . $row["id"] . " - ";
+      echo "Username: " . $row["username"] . " - ";
+      echo "Email: " . $row["email"] . " - ";
+      echo "Age: " . $row["age"] . "&lt;br&gt;";
+    }
+  } else {
+    echo "No users found";
+  }
+  
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <h3>Select Specific User:</h3>
+        <pre>&lt;?php
+  $conn = mysqli_connect("localhost", "root", "", "myWebsite");
+  
+  $searchId = 1;
+  
+  // Using prepared statement for security
+  $stmt = $conn-&gt;prepare("SELECT username, email, age FROM users WHERE id = ?");
+  $stmt-&gt;bind_param("i", $searchId);
+  $stmt-&gt;execute();
+  
+  // Get result
+  $result = $stmt-&gt;get_result();
+  
+  if ($result-&gt;num_rows &gt; 0) {
+    $user = $result-&gt;fetch_assoc();
+    echo "Username: " . $user["username"] . "&lt;br&gt;";
+    echo "Email: " . $user["email"] . "&lt;br&gt;";
+    echo "Age: " . $user["age"];
+  } else {
+    echo "User not found";
+  }
+  
+  $stmt-&gt;close();
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <h2>✏️ Updating Data (UPDATE)</h2>
+        <p>Modify existing records in the database:</p>
+
+        <pre>&lt;?php
+  $conn = mysqli_connect("localhost", "root", "", "myWebsite");
+  
+  $userId = 1;
+  $newEmail = "newemail@example.com";
+  $newAge = 26;
+  
+  // Prepare update statement
+  $stmt = $conn-&gt;prepare("UPDATE users SET email = ?, age = ? WHERE id = ?");
+  $stmt-&gt;bind_param("sii", $newEmail, $newAge, $userId);
+  
+  if ($stmt-&gt;execute()) {
+    echo "User information updated successfully!";
+    echo "Rows affected: " . $stmt-&gt;affected_rows;
+  } else {
+    echo "Error updating: " . $stmt-&gt;error;
+  }
+  
+  $stmt-&gt;close();
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <h2>🗑️ Deleting Data (DELETE)</h2>
+        <p>Remove records from the database:</p>
+
+        <pre>&lt;?php
+  $conn = mysqli_connect("localhost", "root", "", "myWebsite");
+  
+  $userIdToDelete = 5;
+  
+  // Prepare delete statement
+  $stmt = $conn-&gt;prepare("DELETE FROM users WHERE id = ?");
+  $stmt-&gt;bind_param("i", $userIdToDelete);
+  
+  if ($stmt-&gt;execute()) {
+    if ($stmt-&gt;affected_rows &gt; 0) {
+      echo "User deleted successfully!";
+    } else {
+      echo "No user found with that ID";
+    }
+  } else {
+    echo "Error deleting: " . $stmt-&gt;error;
+  }
+  
+  $stmt-&gt;close();
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <div class="important-note">
+            <strong>⚠️ Be Careful with DELETE:</strong> Always use a WHERE clause! Without it, you'll delete ALL records. Double-check before executing delete operations.
+        </div>
+
+        <h2>🎯 Complete Example: User Management System</h2>
+        <pre>&lt;?php
+  // Database connection
+  $conn = mysqli_connect("localhost", "root", "", "myWebsite");
+  
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+  
+  // Function to register new user
+  function registerUser($conn, $username, $email, $password, $age) {
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    
+    $stmt = $conn-&gt;prepare("INSERT INTO users (username, email, password, age) VALUES (?, ?, ?, ?)");
+    $stmt-&gt;bind_param("sssi", $username, $email, $hashedPassword, $age);
+    
+    if ($stmt-&gt;execute()) {
+      return "User registered with ID: " . $conn-&gt;insert_id;
+    } else {
+      return "Error: " . $stmt-&gt;error;
+    }
+  }
+  
+  // Function to get all users
+  function getAllUsers($conn) {
+    $sql = "SELECT id, username, email, age, created_at FROM users";
+    $result = mysqli_query($conn, $sql);
+    $users = [];
+    
+    while ($row = mysqli_fetch_assoc($result)) {
+      $users[] = $row;
+    }
+    
+    return $users;
+  }
+  
+  // Function to verify login
+  function verifyLogin($conn, $username, $password) {
+    $stmt = $conn-&gt;prepare("SELECT id, password FROM users WHERE username = ?");
+    $stmt-&gt;bind_param("s", $username);
+    $stmt-&gt;execute();
+    $result = $stmt-&gt;get_result();
+    
+    if ($result-&gt;num_rows === 1) {
+      $user = $result-&gt;fetch_assoc();
+      if (password_verify($password, $user["password"])) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  // Example usage
+  echo registerUser($conn, "alice123", "alice@example.com", "password123", 24);
+  
+  $allUsers = getAllUsers($conn);
+  foreach ($allUsers as $user) {
+    echo $user["username"] . " - " . $user["email"] . "&lt;br&gt;";
+  }
+  
+  mysqli_close($conn);
+?&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Key Takeaways:</strong></p>
+            <ul>
+                <li>Always use prepared statements to prevent SQL injection</li>
+                <li>Never store passwords in plain text - always hash them with <code>password_hash()</code></li>
+                <li>Close database connections when you're done</li>
+                <li>Handle errors gracefully with proper error messages</li>
+                <li>Test your queries carefully, especially DELETE and UPDATE</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Cookies Section -->
+    <div id="cookies" class="topic-content">
+        <h1>🍪 PHP Cookies</h1>
+        
+        <div class="intro-box">
+            <p>Have you ever noticed that websites remember your preferences, like your username or language choice, even after you close your browser? That's cookies at work! Cookies are small pieces of data stored on the user's computer that help websites remember information between visits.</p>
+        </div>
+
+        <h2>🤔 What is a Cookie?</h2>
+        <p>A <strong>cookie</strong> is a small text file (usually 4KB or less) that websites store on your computer. When you visit the website again, it reads the cookie to remember information about you.</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Analogy:</h3>
+            <p>Think of a cookie like a loyalty card at a coffee shop:</p>
+            <ul>
+                <li><strong>First visit:</strong> The shop gives you a loyalty card (cookie)</li>
+                <li><strong>The card stores:</strong> Your name, favorite drink, points earned</li>
+                <li><strong>Next visit:</strong> You show the card and they remember you</li>
+                <li><strong>Expiration:</strong> Card might expire after 1 year</li>
+            </ul>
+            <p>Cookies work exactly the same way on websites!</p>
+        </div>
+
+        <h2>🎯 What are Cookies Used For?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h4>Remembering Login</h4>
+                <p>"Keep me logged in" checkbox uses cookies</p>
+            </div>
+            <div class="benefit-item">
+                <h4>Shopping Carts</h4>
+                <p>Remembering items you added even after closing browser</p>
+            </div>
+            <div class="benefit-item">
+                <h4>User Preferences</h4>
+                <p>Language, theme, font size choices</p>
+            </div>
+            <div class="benefit-item">
+                <h4>Tracking</h4>
+                <p>Remembering which pages you visited</p>
+            </div>
+        </div>
+
+        <h2>🍪 Creating a Cookie</h2>
+        <p>In PHP, we use the <code>setcookie()</code> function to create cookies:</p>
+
+        <pre>&lt;?php
+  // Basic syntax
+  setcookie("username", "JohnDoe", time() + (86400 * 30), "/");
+  
+  // Breakdown:
+  // "username" - Cookie name
+  // "JohnDoe" - Cookie value
+  // time() + (86400 * 30) - Expires in 30 days (86400 seconds = 1 day)
+  // "/" - Available throughout entire website
+  
+  echo "Cookie has been set!";
+?&gt;</pre>
+
+        <div class="important-note">
+            <strong>⚠️ Important:</strong> <code>setcookie()</code> must be called BEFORE any HTML output. It should be at the very top of your PHP file, before any <code>&lt;html&gt;</code> tags or <code>echo</code> statements.
+        </div>
+
+        <h2>📝 Complete Cookie Syntax</h2>
+        <pre>&lt;?php
+  setcookie(
+    "cookieName",           // Name
+    "cookieValue",          // Value
+    time() + 3600,          // Expiration time (1 hour from now)
+    "/",                    // Path (/ means entire website)
+    "example.com",          // Domain
+    true,                   // Secure (only HTTPS)
+    true                    // HTTP only (not accessible via JavaScript)
+  );
+?&gt;</pre>
+
+        <h2>📖 Reading (Accessing) Cookies</h2>
+        <p>To read a cookie, use the <code>$_COOKIE</code> superglobal array:</p>
+
+        <pre>&lt;?php
+  // Check if cookie exists
+  if(isset($_COOKIE["username"])) {
+    $username = $_COOKIE["username"];
+    echo "Welcome back, " . $username . "!";
+  } else {
+    echo "Welcome, new visitor!";
+  }
+?&gt;</pre>
+
+        <h3>Complete Example: Remember Me Feature</h3>
+        <pre>&lt;?php
+  // Set cookie when user logs in
+  if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    
+    // If "Remember Me" is checked
+    if (isset($_POST['remember'])) {
+      // Set cookie for 30 days
+      setcookie("username", $username, time() + (86400 * 30), "/");
+      echo "You will be remembered for 30 days!";
+    } else {
+      // Cookie expires when browser closes
+      setcookie("username", $username, 0, "/");
+    }
+  }
+  
+  // Check if user is remembered
+  if (isset($_COOKIE["username"])) {
+    echo "Welcome back, " . $_COOKIE["username"] . "!";
+  }
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Login&lt;/h2&gt;
+  &lt;form method="POST"&gt;
+    &lt;input type="text" name="username" placeholder="Username"&gt;&lt;br&gt;
+    &lt;input type="password" name="password" placeholder="Password"&gt;&lt;br&gt;
+    &lt;input type="checkbox" name="remember"&gt; Remember Me&lt;br&gt;
+    &lt;button type="submit" name="login"&gt;Login&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h2>✏️ Modifying a Cookie</h2>
+        <p>To modify a cookie, just set it again with a new value:</p>
+
+        <pre>&lt;?php
+  // Original cookie
+  setcookie("username", "JohnDoe", time() + 3600, "/");
+  
+  // Later, update it
+  setcookie("username", "JohnSmith", time() + 3600, "/");
+  
+  echo "Cookie updated!";
+?&gt;</pre>
+
+        <h2>🗑️ Deleting a Cookie</h2>
+        <p>To delete a cookie, set its expiration time to the past:</p>
+
+        <pre>&lt;?php
+  // Delete cookie by setting expiration to 1 hour ago
+  setcookie("username", "", time() - 3600, "/");
+  
+  echo "Cookie deleted!";
+?&gt;</pre>
+
+        <h3>Logout Example:</h3>
+        <pre>&lt;?php
+  // logout.php
+  
+  // Delete all cookies
+  setcookie("username", "", time() - 3600, "/");
+  setcookie("user_id", "", time() - 3600, "/");
+  setcookie("preferences", "", time() - 3600, "/");
+  
+  echo "You have been logged out successfully!";
+  echo "&lt;a href='login.php'&gt;Login again&lt;/a&gt;";
+?&gt;</pre>
+
+        <h2>🎯 Practical Example: Visit Counter</h2>
+        <pre>&lt;?php
+  // Check if visit count cookie exists
+  if(isset($_COOKIE["visit_count"])) {
+    $count = $_COOKIE["visit_count"];
+    $count++;  // Increase count
+  } else {
+    $count = 1;  // First visit
+  }
+  
+  // Update cookie (expires in 1 year)
+  setcookie("visit_count", $count, time() + (86400 * 365), "/");
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Visit Counter&lt;/h2&gt;
+  &lt;p&gt;You have visited this page &lt;strong&gt;&lt;?php echo $count; ?&gt;&lt;/strong&gt; times.&lt;/p&gt;
+  
+  &lt;?php if($count == 1): ?&gt;
+    &lt;p&gt;Welcome! This is your first visit!&lt;/p&gt;
+  &lt;?php elseif($count &lt; 5): ?&gt;
+    &lt;p&gt;Thanks for coming back!&lt;/p&gt;
+  &lt;?php else: ?&gt;
+    &lt;p&gt;Wow! You're a frequent visitor!&lt;/p&gt;
+  &lt;?php endif; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h2>🎨 Practical Example: Theme Preference</h2>
+        <pre>&lt;?php
+  // Handle theme selection
+  if(isset($_POST['theme'])) {
+    $selectedTheme = $_POST['theme'];
+    setcookie("user_theme", $selectedTheme, time() + (86400 * 365), "/");
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
+  }
+  
+  // Get current theme
+  $theme = isset($_COOKIE["user_theme"]) ? $_COOKIE["user_theme"] : "light";
+  
+  // Set colors based on theme
+  if($theme == "dark") {
+    $bgColor = "#333";
+    $textColor = "#fff";
+  } else {
+    $bgColor = "#fff";
+    $textColor = "#000";
+  }
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body {
+      background-color: &lt;?php echo $bgColor; ?&gt;;
+      color: &lt;?php echo $textColor; ?&gt;;
+      padding: 20px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Theme Selector&lt;/h2&gt;
+  &lt;p&gt;Current theme: &lt;strong&gt;&lt;?php echo ucfirst($theme); ?&gt;&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;form method="POST"&gt;
+    &lt;select name="theme"&gt;
+      &lt;option value="light" &lt;?php if($theme=="light") echo "selected"; ?&gt;&gt;Light&lt;/option&gt;
+      &lt;option value="dark" &lt;?php if($theme=="dark") echo "selected"; ?&gt;&gt;Dark&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button type="submit"&gt;Change Theme&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h2>🔒 Cookie Security Best Practices</h2>
+        <div class="important-note">
+            <h4>Important Security Tips:</h4>
+            <ul>
+                <li><strong>Never store sensitive data:</strong> Passwords, credit card numbers, personal info</li>
+                <li><strong>Use HttpOnly flag:</strong> Prevents JavaScript from accessing cookies</li>
+                <li><strong>Use Secure flag:</strong> Ensures cookies only sent over HTTPS</li>
+                <li><strong>Set appropriate expiration:</strong> Don't make cookies last forever</li>
+                <li><strong>Validate cookie data:</strong> Always check if cookie values are what you expect</li>
+            </ul>
+        </div>
+
+        <h3>Secure Cookie Example:</h3>
+        <pre>&lt;?php
+  // Secure cookie creation
+  setcookie(
+    "user_token",
+    hash('sha256', 'random_token_value'),
+    time() + 3600,      // 1 hour
+    "/",                // Path
+    "",                 // Domain (leave empty for current domain)
+    true,               // Secure (HTTPS only)
+    true                // HttpOnly (not accessible via JavaScript)
+  );
+?&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Practice Exercise:</strong> Create a simple "Last Visit" tracker that shows the date and time of the user's previous visit. Display a welcome message on the first visit.</p>
+            <details>
+                <summary>Click to see the solution</summary>
+                <pre>&lt;?php
+  $currentTime = date("Y-m-d H:i:s");
+  
+  if(isset($_COOKIE["last_visit"])) {
+    $lastVisit = $_COOKIE["last_visit"];
+    echo "&lt;h2&gt;Welcome Back!&lt;/h2&gt;";
+    echo "&lt;p&gt;Your last visit was: " . $lastVisit . "&lt;/p&gt;";
+  } else {
+    echo "&lt;h2&gt;Welcome!&lt;/h2&gt;";
+    echo "&lt;p&gt;This is your first visit!&lt;/p&gt;";
+  }
+  
+  // Update cookie with current time
+  setcookie("last_visit", $currentTime, time() + (86400 * 365), "/");
+?&gt;</pre>
+            </details>
+        </div>
+    </div>
+
+    <!-- Sessions Section -->
+    <div id="sessions" class="topic-content">
+        <h1>🔐 PHP Sessions</h1>
+        
+        <div class="intro-box">
+            <p>Sessions are like your personal locker at a gym - they store your information securely on the server while you use the website. Unlike cookies (stored on user's computer), sessions keep data on the server, making them more secure for sensitive information like login status and user preferences.</p>
+        </div>
+
+        <h2>🤔 What is a Session?</h2>
+        <p>A <strong>session</strong> is a way to store information temporarily on the server for a specific user. Each user gets a unique session ID, which acts like a key to their personal storage space on the server.</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Analogy:</h3>
+            <p>Think of sessions like a coat check at a restaurant:</p>
+            <ul>
+                <li><strong>You arrive:</strong> They give you a numbered ticket (session ID)</li>
+                <li><strong>Your coat:</strong> Stored safely in the back (session data on server)</li>
+                <li><strong>During visit:</strong> You keep the ticket to prove it's yours</li>
+                <li><strong>You leave:</strong> Show ticket, get your coat back (session ends)</li>
+                <li><strong>Lost ticket:</strong> Can't claim the coat (session expires)</li>
+            </ul>
+        </div>
+
+        <h2>🆚 Sessions vs Cookies</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h4>Sessions</h4>
+                <ul>
+                    <li>Stored on server</li>
+                    <li>More secure</li>
+                    <li>Can store large data</li>
+                    <li>Expires when browser closes</li>
+                    <li>Best for sensitive data</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <h4>Cookies</h4>
+                <ul>
+                    <li>Stored on user's computer</li>
+                    <li>Less secure</li>
+                    <li>Limited to 4KB</li>
+                    <li>Can last for years</li>
+                    <li>Best for preferences</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🚀 Starting a Session</h2>
+        <p>Before you can use sessions, you must start one with <code>session_start()</code>:</p>
+
+        <pre>&lt;?php
+  // Always start session at the very beginning of your PHP file
+  session_start();
+  
+  echo "Session started successfully!";
+?&gt;</pre>
+
+        <div class="important-note">
+            <strong>⚠️ Critical Rule:</strong> <code>session_start()</code> MUST be called before any HTML output or <code>echo</code> statements. Put it at the very top of your PHP file!
+        </div>
+
+        <h2>💾 Storing Data in Sessions</h2>
+        <p>Once session is started, use the <code>$_SESSION</code> superglobal array to store data:</p>
+
+        <pre>&lt;?php
+  session_start();
+  
+  // Store single values
+  $_SESSION["username"] = "JohnDoe";
+  $_SESSION["email"] = "john@example.com";
+  $_SESSION["user_id"] = 12345;
+  $_SESSION["is_logged_in"] = true;
+  
+  echo "Session data stored successfully!";
+?&gt;</pre>
+
+        <h3>Storing Complex Data:</h3>
+        <pre>&lt;?php
+  session_start();
+  
+  // Store arrays
+  $_SESSION["user_info"] = [
+    "name" =&gt; "John Doe",
+    "age" =&gt; 25,
+    "role" =&gt; "admin"
+  ];
+  
+  // Store shopping cart
+  $_SESSION["cart"] = [
+    ["product" =&gt; "Laptop", "price" =&gt; 599.99],
+    ["product" =&gt; "Mouse", "price" =&gt; 29.99]
+  ];
+  
+  echo "Complex data stored!";
+?&gt;</pre>
+
+        <h2>📖 Reading Session Data</h2>
+        <p>Access stored session data from any page (as long as session is started):</p>
+
+        <pre>&lt;?php
+  session_start();
+  
+  // Check if session variable exists
+  if(isset($_SESSION["username"])) {
+    $username = $_SESSION["username"];
+    echo "Welcome, " . $username . "!";
+  } else {
+    echo "You are not logged in.";
+  }
+  
+  // Access array data
+  if(isset($_SESSION["user_info"])) {
+    echo "Name: " . $_SESSION["user_info"]["name"];
+    echo "Role: " . $_SESSION["user_info"]["role"];
+  }
+?&gt;</pre>
+
+        <h2>🎯 Complete Login System Example</h2>
+
+        <h3>login.php - Login Form</h3>
+        <pre>&lt;?php
+  session_start();
+  
+  // If already logged in, redirect to dashboard
+  if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
+    header("Location: dashboard.php");
+    exit();
+  }
+  
+  // Handle login
+  if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    
+    // In real app, verify against database
+    if($username == "admin" && $password == "password123") {
+      // Set session variables
+      $_SESSION["logged_in"] = true;
+      $_SESSION["username"] = $username;
+      $_SESSION["login_time"] = time();
+      
+      header("Location: dashboard.php");
+      exit();
+    } else {
+      $error = "Invalid username or password!";
+    }
+  }
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Login&lt;/h2&gt;
+  
+  &lt;?php if(isset($error)): ?&gt;
+    &lt;p style="color: red;"&gt;&lt;?php echo $error; ?&gt;&lt;/p&gt;
+  &lt;?php endif; ?&gt;
+  
+  &lt;form method="POST"&gt;
+    &lt;input type="text" name="username" placeholder="Username" required&gt;&lt;br&gt;
+    &lt;input type="password" name="password" placeholder="Password" required&gt;&lt;br&gt;
+    &lt;button type="submit"&gt;Login&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h3>dashboard.php - Protected Page</h3>
+        <pre>&lt;?php
+  session_start();
+  
+  // Check if user is logged in
+  if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
+    header("Location: login.php");
+    exit();
+  }
+  
+  // Calculate how long user has been logged in
+  $loginDuration = time() - $_SESSION["login_time"];
+  $minutes = floor($loginDuration / 60);
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Dashboard&lt;/h2&gt;
+  &lt;p&gt;Welcome, &lt;strong&gt;&lt;?php echo $_SESSION["username"]; ?&gt;&lt;/strong&gt;!&lt;/p&gt;
+  &lt;p&gt;You've been logged in for &lt;?php echo $minutes; ?&gt; minutes.&lt;/p&gt;
+  
+  &lt;a href="logout.php"&gt;Logout&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h3>logout.php - Destroy Session</h3>
+        <pre>&lt;?php
+  session_start();
+  
+  // Unset all session variables
+  $_SESSION = array();
+  
+  // Destroy session cookie
+  if(isset($_COOKIE[session_name()])) {
+    setcookie(session_name(), '', time()-3600, '/');
+  }
+  
+  // Finally, destroy the session
+  session_destroy();
+  
+  header("Location: login.php");
+  exit();
+?&gt;</pre>
+
+        <h2>✏️ Modifying Session Variables</h2>
+        <pre>&lt;?php
+  session_start();
+  
+  // Original value
+  $_SESSION["score"] = 100;
+  
+  // Update value
+  $_SESSION["score"] = 150;
+  
+  // Increment value
+  $_SESSION["score"] += 50;  // Now 200
+  
+  echo "Current score: " . $_SESSION["score"];
+?&gt;</pre>
+
+        <h2>🗑️ Removing Session Variables</h2>
+
+        <h3>Remove Specific Variable:</h3>
+        <pre>&lt;?php
+  session_start();
+  
+  // Remove specific session variable
+  unset($_SESSION["username"]);
+  
+  echo "Username removed from session";
+?&gt;</pre>
+
+        <h3>Remove All Variables (but keep session active):</h3>
+        <pre>&lt;?php
+  session_start();
+  
+  // Clear all session variables
+  $_SESSION = array();
+  // OR
+  session_unset();
+  
+  echo "All session variables cleared";
+?&gt;</pre>
+
+        <h3>Completely Destroy Session:</h3>
+        <pre>&lt;?php
+  session_start();
+  
+  // Complete session destruction (for logout)
+  $_SESSION = array();
+  
+  if(isset($_COOKIE[session_name()])) {
+    setcookie(session_name(), '', time()-3600, '/');
+  }
+  
+  session_destroy();
+  
+  echo "Session completely destroyed";
+?&gt;</pre>
+
+        <h2>🛒 Practical Example: Shopping Cart</h2>
+        <pre>&lt;?php
+  session_start();
+  
+  // Initialize cart if doesn't exist
+  if(!isset($_SESSION["cart"])) {
+    $_SESSION["cart"] = [];
+  }
+  
+  // Add product to cart
+  if(isset($_POST["add_to_cart"])) {
+    $product = [
+      "id" =&gt; $_POST["product_id"],
+      "name" =&gt; $_POST["product_name"],
+      "price" =&gt; $_POST["product_price"],
+      "quantity" =&gt; 1
+    ];
+    
+    $_SESSION["cart"][] = $product;
+    echo "Product added to cart!";
+  }
+  
+  // Display cart
+  if(count($_SESSION["cart"]) &gt; 0) {
+    echo "&lt;h3&gt;Your Cart:&lt;/h3&gt;";
+    $total = 0;
+    
+    foreach($_SESSION["cart"] as $item) {
+      echo $item["name"] . " - $" . $item["price"] . "&lt;br&gt;";
+      $total += $item["price"];
+    }
+    
+    echo "&lt;strong&gt;Total: $" . $total . "&lt;/strong&gt;";
+  } else {
+    echo "Your cart is empty";
+  }
+  
+  // Clear cart
+  if(isset($_POST["clear_cart"])) {
+    $_SESSION["cart"] = [];
+    echo "Cart cleared!";
+  }
+?&gt;
+
+&lt;!-- Add product form --&gt;
+&lt;form method="POST"&gt;
+  &lt;input type="hidden" name="product_id" value="1"&gt;
+  &lt;input type="hidden" name="product_name" value="Laptop"&gt;
+  &lt;input type="hidden" name="product_price" value="599.99"&gt;
+  &lt;button type="submit" name="add_to_cart"&gt;Add Laptop to Cart&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;form method="POST"&gt;
+  &lt;button type="submit" name="clear_cart"&gt;Clear Cart&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+        <h2>⏰ Session Timeout Example</h2>
+        <pre>&lt;?php
+  session_start();
+  
+  // Set timeout duration (30 minutes)
+  $timeout_duration = 1800;
+  
+  // Check if session has last activity timestamp
+  if(isset($_SESSION["last_activity"])) {
+    $elapsed_time = time() - $_SESSION["last_activity"];
+    
+    // If more than timeout duration has passed
+    if($elapsed_time &gt; $timeout_duration) {
+      // Destroy session
+      session_unset();
+      session_destroy();
+      
+      header("Location: login.php?timeout=1");
+      exit();
+    }
+  }
+  
+  // Update last activity timestamp
+  $_SESSION["last_activity"] = time();
+?&gt;</pre>
+
+        <h2>🔒 Session Security Best Practices</h2>
+        <div class="important-note">
+            <h4>Security Tips:</h4>
+            <ul>
+                <li><strong>Regenerate Session ID:</strong> After login to prevent session fixation</li>
+                <li><strong>Use HTTPS:</strong> Encrypt data transmission</li>
+                <li><strong>Set Timeouts:</strong> Auto-logout inactive users</li>
+                <li><strong>Validate Session:</strong> Check user agent, IP address</li>
+                <li><strong>Destroy on Logout:</strong> Properly clean up sessions</li>
+            </ul>
+        </div>
+
+        <h3>Secure Login Example:</h3>
+        <pre>&lt;?php
+  session_start();
+  
+  if($login_successful) {
+    // Regenerate session ID to prevent session fixation
+    session_regenerate_id(true);
+    
+    // Store user info
+    $_SESSION["user_id"] = $user_id;
+    $_SESSION["username"] = $username;
+    $_SESSION["logged_in"] = true;
+    $_SESSION["ip_address"] = $_SERVER["REMOTE_ADDR"];
+    $_SESSION["user_agent"] = $_SERVER["HTTP_USER_AGENT"];
+    $_SESSION["last_activity"] = time();
+  }
+?&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Key Takeaways:</strong></p>
+            <ul>
+                <li>Sessions store data on the server, making them more secure than cookies</li>
+                <li>Always call <code>session_start()</code> before using <code>$_SESSION</code></li>
+                <li>Use sessions for login systems, shopping carts, and user preferences</li>
+                <li>Remember to destroy sessions properly when logging out</li>
+                <li>Implement session timeouts for security</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- File System Section -->
+    <div id="filesystem" class="topic-content">
+        <h1>📁 PHP File System</h1>
+        
+        <div class="intro-box">
+            <p>Files are everywhere in web development - user uploads, configuration files, logs, data storage, and more. PHP provides powerful functions to create, read, write, and manage files on your server. Let's learn how to work with files safely and effectively!</p>
+        </div>
+
+        <h2>🤔 What is File Handling?</h2>
+        <p><strong>File handling</strong> is the ability to create, read, write, update, and delete files on the server using PHP. This is essential for many web applications.</p>
+
+        <div class="real-world-example">
+            <h3>🌍 Real-World Uses:</h3>
+            <ul>
+                <li><strong>User Uploads:</strong> Profile pictures, documents, videos</li>
+                <li><strong>Data Storage:</strong> Saving user data, configurations</li>
+                <li><strong>Logs:</strong> Recording errors, user activities</li>
+                <li><strong>Content Management:</strong> Blog posts, articles</li>
+                <li><strong>File Downloads:</strong> Serving PDFs, images, documents</li>
+            </ul>
+        </div>
+
+        <h2>📖 Reading Files</h2>
+
+        <h3>Method 1: file_get_contents() (Easiest)</h3>
+        <p>Reads entire file into a string:</p>
+        <pre>&lt;?php
+  // Read entire file
+  $content = file_get_contents("data.txt");
+  echo $content;
+  
+  // Check if file exists first
+  if(file_exists("data.txt")) {
+    $content = file_get_contents("data.txt");
+    echo $content;
+  } else {
+    echo "File not found!";
+  }
+?&gt;</pre>
+
+        <h3>Method 2: fopen(), fread(), fclose()</h3>
+        <p>More control over file reading:</p>
+        <pre>&lt;?php
+  // Open file for reading
+  $file = fopen("data.txt", "r");
+  
+  if($file) {
+    // Read entire file
+    $content = fread($file, filesize("data.txt"));
+    echo $content;
+    
+    // Always close the file
+    fclose($file);
+  } else {
+    echo "Unable to open file";
+  }
+?&gt;</pre>
+
+        <h3>Method 3: fgets() - Read Line by Line</h3>
+        <pre>&lt;?php
+  $file = fopen("data.txt", "r");
+  
+  if($file) {
+    // Read file line by line
+    while(!feof($file)) {
+      $line = fgets($file);
+      echo $line . "&lt;br&gt;";
+    }
+    
+    fclose($file);
+  }
+?&gt;</pre>
+
+        <h2>📝 Writing to Files</h2>
+
+        <h3>Method 1: file_put_contents() (Easiest)</h3>
+        <pre>&lt;?php
+  // Write to file (overwrites existing content)
+  $data = "Hello, this is new content!";
+  file_put_contents("data.txt", $data);
+  
+  echo "File written successfully!";
+  
+  // Append to file (adds to end without deleting existing content)
+  $newData = "\nThis line is appended.";
+  file_put_contents("data.txt", $newData, FILE_APPEND);
+?&gt;</pre>
+
+        <h3>Method 2: fopen(), fwrite(), fclose()</h3>
+        <pre>&lt;?php
+  // Open file for writing (creates if doesn't exist)
+  $file = fopen("data.txt", "w");
+  
+  if($file) {
+    fwrite($file, "First line of text\n");
+    fwrite($file, "Second line of text\n");
+    fwrite($file, "Third line of text\n");
+    
+    fclose($file);
+    echo "File written successfully!";
+  } else {
+    echo "Unable to open file";
+  }
+?&gt;</pre>
+
+        <h2>📋 File Opening Modes</h2>
+        <div class="learn-box">
+            <h3>Important Mode Flags:</h3>
+            <ul>
+                <li><code>r</code> - Read only (file must exist)</li>
+                <li><code>r+</code> - Read and write (file must exist)</li>
+                <li><code>w</code> - Write only (creates new or erases existing)</li>
+                <li><code>w+</code> - Read and write (creates new or erases existing)</li>
+                <li><code>a</code> - Append (writes to end of file, creates if doesn't exist)</li>
+                <li><code>a+</code> - Read and append</li>
+                <li><code>x</code> - Write only (creates new, fails if exists)</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Practical Example: Visitor Log</h2>
+        <pre>&lt;?php
+  // visitor_log.php
+  
+  // Get visitor information
+  $ip = $_SERVER["REMOTE_ADDR"];
+  $timestamp = date("Y-m-d H:i:s");
+  $page = $_SERVER["REQUEST_URI"];
+  
+  // Format log entry
+  $logEntry = "[$timestamp] IP: $ip | Page: $page\n";
+  
+  // Append to log file
+  file_put_contents("visitors.log", $logEntry, FILE_APPEND);
+  
+  echo "Visit logged successfully!";
+  
+  // Display recent visitors (last 10 lines)
+  echo "&lt;h3&gt;Recent Visitors:&lt;/h3&gt;";
+  $logs = file("visitors.log");
+  $recentLogs = array_slice($logs, -10);
+  
+  foreach($recentLogs as $log) {
+    echo htmlspecialchars($log) . "&lt;br&gt;";
+  }
+?&gt;</pre>
+
+        <h2>📤 File Upload Handling</h2>
+        <p>One of the most common file operations is handling user file uploads:</p>
+
+        <h3>HTML Upload Form:</h3>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Upload File&lt;/h2&gt;
+  &lt;form action="upload.php" method="POST" enctype="multipart/form-data"&gt;
+    &lt;input type="file" name="fileToUpload" required&gt;&lt;br&gt;&lt;br&gt;
+    &lt;button type="submit" name="submit"&gt;Upload File&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h3>PHP Upload Handler (upload.php):</h3>
+        <pre>&lt;?php
+  if(isset($_POST["submit"])) {
+    $targetDir = "uploads/";
+    $fileName = basename($_FILES["fileToUpload"]["name"]);
+    $targetFile = $targetDir . $fileName;
+    $uploadOk = 1;
+    $fileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+    
+    // Check if file already exists
+    if(file_exists($targetFile)) {
+      echo "Sorry, file already exists.";
+      $uploadOk = 0;
+    }
+    
+    // Check file size (limit to 5MB)
+    if($_FILES["fileToUpload"]["size"] &gt; 5000000) {
+      echo "Sorry, your file is too large (max 5MB).";
+      $uploadOk = 0;
+    }
+    
+    // Allow certain file formats
+    $allowedTypes = ["jpg", "jpeg", "png", "gif", "pdf"];
+    if(!in_array($fileType, $allowedTypes)) {
+      echo "Sorry, only JPG, JPEG, PNG, GIF & PDF files are allowed.";
+      $uploadOk = 0;
+    }
+    
+    // Check if $uploadOk is set to 0 by an error
+    if($uploadOk == 0) {
+      echo "Sorry, your file was not uploaded.";
+    } else {
+      // Try to upload file
+      if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)) {
+        echo "The file ". htmlspecialchars($fileName). " has been uploaded.";
+        echo "&lt;br&gt;File size: " . $_FILES["fileToUpload"]["size"] . " bytes";
+        echo "&lt;br&gt;File type: " . $fileType;
+      } else {
+        echo "Sorry, there was an error uploading your file.";
+      }
+    }
+  }
+?&gt;</pre>
+
+        <h2>🗑️ Deleting Files</h2>
+        <pre>&lt;?php
+  $fileToDelete = "old_file.txt";
+  
+  if(file_exists($fileToDelete)) {
+    if(unlink($fileToDelete)) {
+      echo "File deleted successfully!";
+    } else {
+      echo "Error deleting file.";
+    }
+  } else {
+    echo "File does not exist.";
+  }
+?&gt;</pre>
+
+        <h2>📊 File Information Functions</h2>
+        <pre>&lt;?php
+  $filename = "data.txt";
+  
+  // Check if file exists
+  if(file_exists($filename)) {
+    echo "File exists!&lt;br&gt;";
+    
+    // Get file size
+    echo "File size: " . filesize($filename) . " bytes&lt;br&gt;";
+    
+    // Get file type
+    echo "File type: " . filetype($filename) . "&lt;br&gt;";
+    
+    // Check if readable
+    if(is_readable($filename)) {
+      echo "File is readable&lt;br&gt;";
+    }
+    
+    // Check if writable
+    if(is_writable($filename)) {
+      echo "File is writable&lt;br&gt;";
+    }
+    
+    // Get last modified time
+    $lastModified = filemtime($filename);
+    echo "Last modified: " . date("Y-m-d H:i:s", $lastModified) . "&lt;br&gt;";
+    
+    // Get last access time
+    $lastAccess = fileatime($filename);
+    echo "Last accessed: " . date("Y-m-d H:i:s", $lastAccess) . "&lt;br&gt;";
+  } else {
+    echo "File does not exist.";
+  }
+?&gt;</pre>
+
+        <h2>📂 Directory Operations</h2>
+
+        <h3>Create Directory:</h3>
+        <pre>&lt;?php
+  $dirName = "uploads";
+  
+  if(!file_exists($dirName)) {
+    if(mkdir($dirName, 0777, true)) {
+      echo "Directory created successfully!";
+    } else {
+      echo "Failed to create directory.";
+    }
+  } else {
+    echo "Directory already exists.";
+  }
+?&gt;</pre>
+
+        <h3>List Files in Directory:</h3>
+        <pre>&lt;?php
+  $directory = "uploads/";
+  
+  if(is_dir($directory)) {
+    $files = scandir($directory);
+    
+    echo "&lt;h3&gt;Files in $directory:&lt;/h3&gt;";
+    
+    foreach($files as $file) {
+      // Skip . and ..
+      if($file != "." && $file != "..") {
+        $filePath = $directory . $file;
+        $fileSize = filesize($filePath);
+        echo "$file - " . $fileSize . " bytes&lt;br&gt;";
+      }
+    }
+  } else {
+    echo "Directory does not exist.";
+  }
+?&gt;</pre>
+
+        <h3>Delete Directory:</h3>
+        <pre>&lt;?php
+  $dirToDelete = "old_folder";
+  
+  // Directory must be empty to delete
+  if(is_dir($dirToDelete)) {
+    if(rmdir($dirToDelete)) {
+      echo "Directory deleted successfully!";
+    } else {
+      echo "Failed to delete directory (may not be empty).";
+    }
+  }
+?&gt;</pre>
+
+        <h2>🎯 Complete Example: Simple Note-Taking App</h2>
+        <pre>&lt;?php
+  $notesFile = "notes.txt";
+  
+  // Handle form submission
+  if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if(isset($_POST["add_note"])) {
+      // Add new note
+      $note = $_POST["note"];
+      $timestamp = date("Y-m-d H:i:s");
+      $entry = "[$timestamp] $note\n";
+      
+      file_put_contents($notesFile, $entry, FILE_APPEND);
+      echo "&lt;p style='color: green;'&gt;Note added successfully!&lt;/p&gt;";
+    }
+    
+    if(isset($_POST["clear_notes"])) {
+      // Clear all notes
+      file_put_contents($notesFile, "");
+      echo "&lt;p style='color: green;'&gt;All notes cleared!&lt;/p&gt;";
+    }
+  }
+  
+  // Read and display notes
+  $notes = "";
+  if(file_exists($notesFile)) {
+    $notes = file_get_contents($notesFile);
+  }
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Simple Notes App&lt;/title&gt;
+  &lt;style&gt;
+    body { font-family: Arial; padding: 20px; }
+    .notes-box { background: #f0f0f0; padding: 15px; margin: 20px 0; min-height: 200px; }
+    textarea { width: 100%; padding: 10px; margin: 10px 0; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;📝 My Notes&lt;/h2&gt;
+  
+  &lt;!-- Add Note Form --&gt;
+  &lt;form method="POST"&gt;
+    &lt;textarea name="note" rows="4" placeholder="Write your note here..." required&gt;&lt;/textarea&gt;&lt;br&gt;
+    &lt;button type="submit" name="add_note"&gt;Add Note&lt;/button&gt;
+  &lt;/form&gt;
+  
+  &lt;!-- Display Notes --&gt;
+  &lt;div class="notes-box"&gt;
+    &lt;h3&gt;Your Notes:&lt;/h3&gt;
+    &lt;?php if(!empty($notes)): ?&gt;
+      &lt;pre&gt;&lt;?php echo htmlspecialchars($notes); ?&gt;&lt;/pre&gt;
+    &lt;?php else: ?&gt;
+      &lt;p&gt;No notes yet. Add your first note above!&lt;/p&gt;
+    &lt;?php endif; ?&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Clear Notes --&gt;
+  &lt;form method="POST" onsubmit="return confirm('Are you sure you want to delete all notes?');"&gt;
+    &lt;button type="submit" name="clear_notes" style="background: red; color: white;"&gt;Clear All Notes&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h2>🔒 File Security Best Practices</h2>
+        <div class="important-note">
+            <h4>Security Guidelines:</h4>
+            <ul>
+                <li><strong>Validate file types:</strong> Check extensions and MIME types</li>
+                <li><strong>Limit file sizes:</strong> Prevent large uploads that could fill your server</li>
+                <li><strong>Rename uploaded files:</strong> Use unique names to prevent overwriting</li>
+                <li><strong>Store outside web root:</strong> Don't allow direct access to uploaded files</li>
+                <li><strong>Scan for viruses:</strong> Use antivirus tools for uploads</li>
+                <li><strong>Set proper permissions:</strong> Don't make files world-writable</li>
+                <li><strong>Never trust user input:</strong> Validate and sanitize filenames</li>
+            </ul>
+        </div>
+
+        <h3>Secure Upload Example:</h3>
+        <pre>&lt;?php
+  if(isset($_FILES["file"])) {
+    // Generate unique filename
+    $extension = pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
+    $uniqueName = uniqid() . "_" . time() . "." . $extension;
+    
+    // Validate file type
+    $allowedTypes = ["image/jpeg", "image/png", "image/gif"];
+    $fileType = $_FILES["file"]["type"];
+    
+    if(in_array($fileType, $allowedTypes)) {
+      // Validate file size (max 2MB)
+      if($_FILES["file"]["size"] &lt;= 2097152) {
+        $targetPath = "uploads/" . $uniqueName;
+        
+        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetPath)) {
+          echo "File uploaded securely as: " . $uniqueName;
+        }
+      } else {
+        echo "File too large (max 2MB)";
+      }
+    } else {
+      echo "Invalid file type";
+    }
+  }
+?&gt;</pre>
+
+        <div class="encouragement-box">
+            <p><strong>🎓 Practice Exercise:</strong> Create a simple guestbook where visitors can leave messages. Save each message with a timestamp to a text file, and display all previous messages.</p>
+            <p><strong>Bonus Challenge:</strong> Add the ability to delete individual messages!</p>
+        </div>
+
+        <div class="encouragement-box">
+            <p><strong>🌟 Congratulations!</strong> You've completed the PHP tutorial! You now know:</p>
+            <ul>
+                <li>✅ PHP basics and syntax</li>
+                <li>✅ Variables and data types</li>
+                <li>✅ Functions</li>
+                <li>✅ String and array manipulation</li>
+                <li>✅ Form handling and validation</li>
+                <li>✅ Database connectivity</li>
+                <li>✅ Cookies and sessions</li>
+                <li>✅ File system operations</li>
+            </ul>
+            <p><strong>Keep practicing and building projects! The more you code, the better you'll become. Good luck with your PHP journey! 💪</strong></p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 WebDev with PHP | Designed by Uday Sharma | For Beginner Programmers</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    function showTopic(topicId) {
+        // Hide all content sections
+        const allContent = document.querySelectorAll('.topic-content');
+        allContent.forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        const allButtons = document.querySelectorAll('.nav-btn');
+        allButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Show selected content
+        document.getElementById(topicId).classList.add('active');
+        
+        // Add active class to clicked button
+        event.target.classList.add('active');
+        
+        // Scroll to top of content area
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</body>
+</html>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 WebDev with PHP | Designed by Uday Sharma | For Beginner Programmers</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    function showTopic(topicId) {
+        // Hide all content sections
+        const allContent = document.querySelectorAll('.topic-content');
+        allContent.forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        const allButtons = document.querySelectorAll('.nav-btn');
+        allButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Show selected content
+        document.getElementById(topicId).classList.add('active');
+        
+        // Add active class to clicked button
+        event.target.classList.add('active');
+        
+        // Scroll to top of content area
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</body>
+</html>
