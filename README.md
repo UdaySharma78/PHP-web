@@ -50,15 +50,8 @@ phpfweb/
 ├── index.html        # Home page with hero, features, and PHP intro
 ├── lrnphp.html       # Main learning page with all 10 PHP topics
 ├── about.html        # About page
-├── login.php         # User login with session management
-├── register.php      # New user registration
-├── logout.php        # Session destroy and redirect
-├── query.php         # Protected page for logged-in users to submit queries
-├── config.php        # Database connection configuration
 ├── index.css         # Main stylesheet for home page
 ├── styles.css        # Shared/global styles
-├── style1.css        # Additional styles
-└── mypic.jpeg        # Site image asset
 ```
 
 ---
@@ -94,64 +87,6 @@ phpfweb/
    # For XAMPP on Linux/macOS:
    mv phpfweb/ /opt/lampp/htdocs/
    ```
-
-3. **Set up the database**
-
-   Open **phpMyAdmin** (or your MySQL client) and run:
-
-   ```sql
-   CREATE DATABASE j4java;
-
-   USE j4java;
-
-   CREATE TABLE users (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     username VARCHAR(50) NOT NULL UNIQUE,
-     password VARCHAR(255) NOT NULL,
-     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
-
-   CREATE TABLE queries (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     user_id INT NOT NULL,
-     query_text TEXT NOT NULL,
-     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-     FOREIGN KEY (user_id) REFERENCES users(id)
-   );
-   ```
-
-4. **Configure the database connection**
-
-   Open `config.php` and update your credentials if needed:
-
-   ```php
-   $host = 'localhost';
-   $db   = 'j4java';
-   $user = 'root';
-   $pass = '';  // your MySQL password
-   ```
-
-5. **Start your local server and visit:**
-   ```
-   http://localhost/phpfweb/index.html
-   ```
-
----
-
-## 🔐 Authentication Flow
-
-```
-Register (register.php)
-    ↓ stores hashed password
-Login (login.php)
-    ↓ verifies password, starts session
-Query Submission (query.php)  ← protected, redirects to login if not logged in
-    ↓
-Logout (logout.php)  → destroys session → redirects to login
-```
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! To contribute:
